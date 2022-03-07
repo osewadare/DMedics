@@ -1,0 +1,17 @@
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Services\bin\Debug\net5.0\DMedics.Services.deps.json
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Services\bin\Debug\net5.0\DMedics.Services.dll
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Services\bin\Debug\net5.0\ref\DMedics.Services.dll
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Services\bin\Debug\net5.0\DMedics.Services.pdb
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Services\bin\Debug\net5.0\DMedics.Core.dll
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Services\bin\Debug\net5.0\DMedics.Infrastructure.dll
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Services\bin\Debug\net5.0\DMedics.Core.pdb
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Services\bin\Debug\net5.0\DMedics.Infrastructure.pdb
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Services\obj\Debug\net5.0\DMedics.Services.csproj.AssemblyReference.cache
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Services\obj\Debug\net5.0\DMedics.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Services\obj\Debug\net5.0\DMedics.Services.AssemblyInfoInputs.cache
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Services\obj\Debug\net5.0\DMedics.Services.AssemblyInfo.cs
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Services\obj\Debug\net5.0\DMedics.Services.csproj.CoreCompileInputs.cache
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Services\obj\Debug\net5.0\DMedics.Services.csproj.CopyComplete
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Services\obj\Debug\net5.0\DMedics.Services.dll
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Services\obj\Debug\net5.0\ref\DMedics.Services.dll
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Services\obj\Debug\net5.0\DMedics.Services.pdb

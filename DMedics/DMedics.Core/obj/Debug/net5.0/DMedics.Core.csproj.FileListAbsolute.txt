@@ -1,0 +1,12 @@
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Core\bin\Debug\net5.0\DMedics.Core.deps.json
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Core\bin\Debug\net5.0\DMedics.Core.dll
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Core\bin\Debug\net5.0\ref\DMedics.Core.dll
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Core\bin\Debug\net5.0\DMedics.Core.pdb
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Core\obj\Debug\net5.0\DMedics.Core.csproj.AssemblyReference.cache
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Core\obj\Debug\net5.0\DMedics.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Core\obj\Debug\net5.0\DMedics.Core.AssemblyInfoInputs.cache
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Core\obj\Debug\net5.0\DMedics.Core.AssemblyInfo.cs
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Core\obj\Debug\net5.0\DMedics.Core.csproj.CoreCompileInputs.cache
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Core\obj\Debug\net5.0\DMedics.Core.dll
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Core\obj\Debug\net5.0\ref\DMedics.Core.dll
+C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Core\obj\Debug\net5.0\DMedics.Core.pdb
