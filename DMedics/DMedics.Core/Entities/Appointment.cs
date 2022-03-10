@@ -8,7 +8,6 @@ namespace DMedics.Core.Entities
 {
    public class Appointment
     {
-
         public int AppointmentId { get; set; }
 
         public int CustomerId { get; set; }

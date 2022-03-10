@@ -10,6 +10,13 @@ namespace DMedics.Core.Entities
 {
     public class ApplicationUser : IdentityUser
     {
+        private int userId;
+
+        public ApplicationUser(int userId)
+        {
+            this.userId = userId;
+        }
+
         [MaxLength(50)]
         [Required]
         public string FirstName { get; set; }

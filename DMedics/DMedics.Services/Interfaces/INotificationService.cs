@@ -9,5 +9,6 @@ namespace DMedics.Services.Interfaces
     public interface INotificationService
     {
         //sent
+        GCNotificationStatus Status (string status);
     }
 }
