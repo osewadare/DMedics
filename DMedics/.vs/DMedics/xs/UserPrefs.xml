@@ -1,0 +1,27 @@
+﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{B72C39AA-EC3F-47AF-9EB6-BFCAC8273987}|DMedics">
+  <MonoDevelop.Ide.ItemProperties.DMedics.API PreferredExecutionTarget="/Applications/Firefox.app" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DMedics" expanded="True" selected="True">
+            <Node name="DMedics.API" expanded="True" />
+            <Node name="DMedics.Infrastructure" expanded="True" />
+            <Node name="DMedics.Repository" expanded="True">
+              <Node name="Repository" expanded="True" />
+            </Node>
+            <Node name="DMedics.Services" expanded="True">
+              <Node name="Services" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,17 @@
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Repository/obj/Debug/net5.0/DMedics.Repository.csproj.AssemblyReference.cache
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Repository/obj/Debug/net5.0/DMedics.Repository.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Repository/obj/Debug/net5.0/DMedics.Repository.AssemblyInfoInputs.cache
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Repository/obj/Debug/net5.0/DMedics.Repository.AssemblyInfo.cs
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Repository/obj/Debug/net5.0/DMedics.Repository.csproj.CoreCompileInputs.cache
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Repository/bin/Debug/net5.0/DMedics.Repository.deps.json
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Repository/bin/Debug/net5.0/DMedics.Repository.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Repository/bin/Debug/net5.0/ref/DMedics.Repository.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Repository/bin/Debug/net5.0/DMedics.Repository.pdb
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Repository/bin/Debug/net5.0/DMedics.Core.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Repository/bin/Debug/net5.0/DMedics.Infrastructure.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Repository/bin/Debug/net5.0/DMedics.Core.pdb
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Repository/bin/Debug/net5.0/DMedics.Infrastructure.pdb
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Repository/obj/Debug/net5.0/DMedics.Repository.csproj.CopyComplete
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Repository/obj/Debug/net5.0/DMedics.Repository.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Repository/obj/Debug/net5.0/ref/DMedics.Repository.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Repository/obj/Debug/net5.0/DMedics.Repository.pdb
