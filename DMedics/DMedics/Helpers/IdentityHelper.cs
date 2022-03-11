@@ -1,4 +1,5 @@
 ﻿using DMedics.Core.Entities;
+using DMedics.Repository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using System;

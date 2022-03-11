@@ -9,5 +9,9 @@ namespace DMedics.Services.Services
 {
     public class NotificationService : INotificationService
     {
+        public 
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DMedics.Core\DMedics.Core.csproj" />
-    <ProjectReference Include="..\DMedics.Infrastructure\DMedics.Infrastructure.csproj" />
+    <ProjectReference Include="..\DMedics.Repository\DMedics.Repository.csproj" />
   </ItemGroup>
 
 </Project>
