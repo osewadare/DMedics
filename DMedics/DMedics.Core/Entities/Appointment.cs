@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DMedics.Core.Enums;
 
 namespace DMedics.Core.Entities
 {
@@ -35,6 +36,6 @@ namespace DMedics.Core.Entities
         public int AppointmentStatusId { get; set; }
 
         //Navigation Property
-        public StatusTitle StatusTitle { get; set; }
+        public AppointmentStatus AppointmentStatus { get; set; }
     }
 }

@@ -1,12 +1,30 @@
-C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Infrastructure\bin\Debug\net5.0\DMedics.Infrastructure.deps.json
-C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Infrastructure\bin\Debug\net5.0\DMedics.Infrastructure.dll
-C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Infrastructure\bin\Debug\net5.0\ref\DMedics.Infrastructure.dll
-C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Infrastructure\bin\Debug\net5.0\DMedics.Infrastructure.pdb
-C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Infrastructure\obj\Debug\net5.0\DMedics.Infrastructure.csproj.AssemblyReference.cache
-C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Infrastructure\obj\Debug\net5.0\DMedics.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Infrastructure\obj\Debug\net5.0\DMedics.Infrastructure.AssemblyInfoInputs.cache
-C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Infrastructure\obj\Debug\net5.0\DMedics.Infrastructure.AssemblyInfo.cs
-C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Infrastructure\obj\Debug\net5.0\DMedics.Infrastructure.csproj.CoreCompileInputs.cache
-C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Infrastructure\obj\Debug\net5.0\DMedics.Infrastructure.dll
-C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Infrastructure\obj\Debug\net5.0\ref\DMedics.Infrastructure.dll
-C:\Users\Chinonso Mfon-Eddie\OneDrive\Documents\GitHub\DMedics\DMedics\DMedics.Infrastructure\obj\Debug\net5.0\DMedics.Infrastructure.pdb
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics.Infrastructure/bin/Debug/net5.0/DMedics.Infrastructure.deps.json
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics.Infrastructure/bin/Debug/net5.0/DMedics.Infrastructure.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics.Infrastructure/bin/Debug/net5.0/ref/DMedics.Infrastructure.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics.Infrastructure/bin/Debug/net5.0/DMedics.Infrastructure.pdb
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics.Infrastructure/obj/Debug/net5.0/DMedics.Infrastructure.csproj.AssemblyReference.cache
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics.Infrastructure/obj/Debug/net5.0/DMedics.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics.Infrastructure/obj/Debug/net5.0/DMedics.Infrastructure.AssemblyInfoInputs.cache
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics.Infrastructure/obj/Debug/net5.0/DMedics.Infrastructure.AssemblyInfo.cs
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics.Infrastructure/obj/Debug/net5.0/DMedics.Infrastructure.csproj.CoreCompileInputs.cache
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics.Infrastructure/obj/Debug/net5.0/DMedics.Infrastructure.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics.Infrastructure/obj/Debug/net5.0/ref/DMedics.Infrastructure.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics.Infrastructure/obj/Debug/net5.0/DMedics.Infrastructure.pdb
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/bin/Debug/net5.0/DMedics.Infrastructure.deps.json
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/bin/Debug/net5.0/DMedics.Infrastructure.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/bin/Debug/net5.0/ref/DMedics.Infrastructure.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/bin/Debug/net5.0/DMedics.Infrastructure.pdb
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/obj/Debug/net5.0/DMedics.Infrastructure.csproj.AssemblyReference.cache
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/obj/Debug/net5.0/DMedics.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/obj/Debug/net5.0/DMedics.Infrastructure.AssemblyInfoInputs.cache
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/obj/Debug/net5.0/DMedics.Infrastructure.AssemblyInfo.cs
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/obj/Debug/net5.0/DMedics.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/obj/Debug/net5.0/DMedics.Infrastructure.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/obj/Debug/net5.0/ref/DMedics.Infrastructure.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/obj/Debug/net5.0/DMedics.Infrastructure.pdb
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/bin/Debug/net5.0/DMedics.Core.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/bin/Debug/net5.0/DMedics.Core.pdb
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/obj/Debug/net5.0/DMedics.Infrastructure.csproj.CopyComplete
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/bin/Debug/net5.0/DMedics.Infrastructure.runtimeconfig.json
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/bin/Debug/net5.0/DMedics.Infrastructure.runtimeconfig.dev.json
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/obj/Debug/net5.0/DMedics.Infrastructure.genruntimeconfig.cache

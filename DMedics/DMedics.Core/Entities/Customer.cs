@@ -9,6 +9,9 @@ namespace DMedics.Core.Entities
 {
     public class Customer
     {
+        [Key]
+        public string Id { get; set; }
+
         [Required]
         [MaxLength(50)]
         public string FirstName { get; set; }

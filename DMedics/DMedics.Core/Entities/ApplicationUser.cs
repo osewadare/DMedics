@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using DMedics.Core.Enums;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -10,13 +11,6 @@ namespace DMedics.Core.Entities
 {
     public class ApplicationUser : IdentityUser
     {
-        private int userId;
-
-        public ApplicationUser(int userId)
-        {
-            this.userId = userId;
-        }
-
         [MaxLength(50)]
         [Required]
         public string FirstName { get; set; }
@@ -28,7 +22,8 @@ namespace DMedics.Core.Entities
         [Required]
         public DateTime DoB { get; set; }
 
-        public enum Gender { }
+        [Required]
+        public Gender Gender { get; set; }
 
         [MaxLength(50)]
         [Required]

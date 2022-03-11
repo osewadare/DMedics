@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using DMedics.Core.Enums;
 using static DMedics.Core.Entities.ApplicationUser;
 
 namespace DMedics.Services.APIModels

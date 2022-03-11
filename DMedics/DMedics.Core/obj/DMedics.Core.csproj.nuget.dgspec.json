@@ -1,31 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Core\\DMedics.Core.csproj": {}
+    "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Core/DMedics.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Core\\DMedics.Core.csproj": {
+    "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Core/DMedics.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Core\\DMedics.Core.csproj",
+        "projectUniqueName": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Core/DMedics.Core.csproj",
         "projectName": "DMedics.Core",
-        "projectPath": "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Core\\DMedics.Core.csproj",
-        "packagesPath": "C:\\Users\\Chinonso Mfon-Eddie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Core\\obj\\",
+        "projectPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Core/DMedics.Core.csproj",
+        "packagesPath": "/Users/dareosewa/.nuget/packages/",
+        "outputPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Core/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Chinonso Mfon-Eddie\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/dareosewa/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -68,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
         }
       }
     }

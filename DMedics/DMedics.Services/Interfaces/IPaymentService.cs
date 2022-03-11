@@ -8,8 +8,6 @@ namespace DMedics.Services.Interfaces
 {
     public interface IPaymentService
     {
-        pub
-        //create payment intent
-        //make payment
+        
     }
 }

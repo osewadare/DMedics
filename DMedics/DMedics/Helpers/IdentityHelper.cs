@@ -1,4 +1,5 @@
 ﻿using DMedics.Core.Entities;
+using DMedics.Infrastructure;
 using DMedics.Repository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,6 +12,8 @@ namespace DMedics.API.Helpers
 {
     public class IdentityHelper
     {
+
+        
         public static void ConfigureService(IServiceCollection service)
         {
             service.AddIdentity<ApplicationUser, IdentityRole>(o =>

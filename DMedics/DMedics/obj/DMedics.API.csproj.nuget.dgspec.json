@@ -1,31 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics\\DMedics.API.csproj": {}
+    "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/DMedics.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Core\\DMedics.Core.csproj": {
+    "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Core/DMedics.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Core\\DMedics.Core.csproj",
+        "projectUniqueName": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Core/DMedics.Core.csproj",
         "projectName": "DMedics.Core",
-        "projectPath": "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Core\\DMedics.Core.csproj",
-        "packagesPath": "C:\\Users\\Chinonso Mfon-Eddie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Core\\obj\\",
+        "projectPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Core/DMedics.Core.csproj",
+        "packagesPath": "/Users/dareosewa/.nuget/packages/",
+        "outputPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Core/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Chinonso Mfon-Eddie\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/dareosewa/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -68,38 +65,39 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Infrastructure\\DMedics.Infrastructure.csproj": {
+    "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/DMedics.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Infrastructure\\DMedics.Infrastructure.csproj",
+        "projectUniqueName": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/DMedics.Infrastructure.csproj",
         "projectName": "DMedics.Infrastructure",
-        "projectPath": "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Infrastructure\\DMedics.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Chinonso Mfon-Eddie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Infrastructure\\obj\\",
+        "projectPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/DMedics.Infrastructure.csproj",
+        "packagesPath": "/Users/dareosewa/.nuget/packages/",
+        "outputPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Chinonso Mfon-Eddie\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/dareosewa/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Core/DMedics.Core.csproj": {
+                "projectPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Core/DMedics.Core.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -112,9 +110,31 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             }
           },
           "imports": [
@@ -132,43 +152,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Repository\\DMedics.Repository.csproj": {
+    "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Repository/DMedics.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Repository\\DMedics.Repository.csproj",
+        "projectUniqueName": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Repository/DMedics.Repository.csproj",
         "projectName": "DMedics.Repository",
-        "projectPath": "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Repository\\DMedics.Repository.csproj",
-        "packagesPath": "C:\\Users\\Chinonso Mfon-Eddie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Repository\\obj\\",
+        "projectPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Repository/DMedics.Repository.csproj",
+        "packagesPath": "/Users/dareosewa/.nuget/packages/",
+        "outputPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Repository/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Chinonso Mfon-Eddie\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/dareosewa/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Core\\DMedics.Core.csproj": {
-                "projectPath": "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Core\\DMedics.Core.csproj"
-              },
-              "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Infrastructure\\DMedics.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Infrastructure\\DMedics.Infrastructure.csproj"
+              "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/DMedics.Infrastructure.csproj": {
+                "projectPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/DMedics.Infrastructure.csproj"
               }
             }
           }
@@ -197,43 +211,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Services\\DMedics.Services.csproj": {
+    "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Services/DMedics.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Services\\DMedics.Services.csproj",
+        "projectUniqueName": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Services/DMedics.Services.csproj",
         "projectName": "DMedics.Services",
-        "projectPath": "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Services\\DMedics.Services.csproj",
-        "packagesPath": "C:\\Users\\Chinonso Mfon-Eddie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Services\\obj\\",
+        "projectPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Services/DMedics.Services.csproj",
+        "packagesPath": "/Users/dareosewa/.nuget/packages/",
+        "outputPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Services/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Chinonso Mfon-Eddie\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/dareosewa/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Core\\DMedics.Core.csproj": {
-                "projectPath": "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Core\\DMedics.Core.csproj"
-              },
-              "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Repository\\DMedics.Repository.csproj": {
-                "projectPath": "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Repository\\DMedics.Repository.csproj"
+              "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Repository/DMedics.Repository.csproj": {
+                "projectPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Repository/DMedics.Repository.csproj"
               }
             }
           }
@@ -262,40 +270,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics\\DMedics.API.csproj": {
+    "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/DMedics.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics\\DMedics.API.csproj",
+        "projectUniqueName": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/DMedics.API.csproj",
         "projectName": "DMedics.API",
-        "projectPath": "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics\\DMedics.API.csproj",
-        "packagesPath": "C:\\Users\\Chinonso Mfon-Eddie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics\\obj\\",
+        "projectPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/DMedics.API.csproj",
+        "packagesPath": "/Users/dareosewa/.nuget/packages/",
+        "outputPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Chinonso Mfon-Eddie\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/dareosewa/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Services\\DMedics.Services.csproj": {
-                "projectPath": "C:\\Users\\Chinonso Mfon-Eddie\\OneDrive\\Documents\\GitHub\\DMedics\\DMedics\\DMedics.Services\\DMedics.Services.csproj"
+              "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Services/DMedics.Services.csproj": {
+                "projectPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Services/DMedics.Services.csproj"
               }
             }
           }
@@ -345,7 +350,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
         }
       }
     }

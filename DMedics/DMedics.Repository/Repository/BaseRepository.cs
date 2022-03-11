@@ -4,13 +4,15 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using DMedics.Infrastructure;
 
 namespace DMedics.Repository.Repository
 {
     public class BaseRepository<T>: IBaseRepository<T> where T: class 
     {
-            protected readonly ApplicationContext _context;
-            public GenericRepository(ApplicationContext context)
+            protected readonly DataContext _context;
+
+            public BaseRepository(DataContext context)
             {
                 _context = context;
             }

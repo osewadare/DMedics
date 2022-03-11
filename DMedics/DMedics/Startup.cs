@@ -14,6 +14,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DMedics.API.Helpers;
+using DMedics.Repository;
+using DMedics.Services.Interfaces;
+using DMedics.Services.Services;
+using DMedics.Infrastructure;
 
 namespace DMedics
 {
@@ -37,6 +42,21 @@ namespace DMedics
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "DMedics", Version = "v1" });
             });
+
+
+
+            //Sets up database services
+            services.AddDbContext<DataContext>(); 
+
+            //sets up identity services using an extension method
+            IdentityHelper.ConfigureService(services);
+
+            //Our own services - Scoped, Transient and Singelton Services
+            //scoped - available throught out the lifetime of a request 
+            services.AddScoped<IAppointmentService, AppointmentService>();
+
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

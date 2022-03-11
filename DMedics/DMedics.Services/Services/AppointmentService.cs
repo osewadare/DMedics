@@ -1,4 +1,5 @@
 ﻿using DMedics.Core.Entities;
+using DMedics.Repository.Repository;
 using DMedics.Services.APIModels;
 using DMedics.Services.Interfaces;
 using System;
@@ -12,6 +13,12 @@ namespace DMedics.Services.Services
     public class AppointmentService : IAppointmentService
     {
 
+        private IBaseRepository<Appointment> _baseRepository;
+
+        public AppointmentService(IBaseRepository<Appointment> baseRepository)
+        {
+            _baseRepository = baseRepository;
+        }
 
         public List<CreatedAppointmentResponseModel> GetAvailableAppointmentDates()
         {
@@ -32,8 +39,6 @@ namespace DMedics.Services.Services
         {
             throw new NotImplementedException();
         }
-
-
 
         //Sprint 2
 

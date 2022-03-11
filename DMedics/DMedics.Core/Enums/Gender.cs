@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DMedics.Core.Enums
 {
-    enum Gender
+    public enum Gender
     {
        Male, 
        Female, 
