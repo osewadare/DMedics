@@ -64,16 +64,6 @@ C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/b
 C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.Primitives.dll
 C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/System.Diagnostics.DiagnosticSource.dll
 C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/System.Runtime.CompilerServices.Unsafe.dll
-/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.csproj.AssemblyReference.cache
-/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.GeneratedMSBuildEditorConfig.editorconfig
-/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.AssemblyInfoInputs.cache
-/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.AssemblyInfo.cs
-/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.csproj.CoreCompileInputs.cache
-/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.MvcApplicationPartsAssemblyInfo.cs
-/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.MvcApplicationPartsAssemblyInfo.cache
-/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.dll
-/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/ref/DMedics.API.dll
-/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.pdb
 /Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/appsettings.Development.json
 /Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/appsettings.json
 /Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.API.StaticWebAssets.xml
@@ -160,8 +150,18 @@ C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/b
 /Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.Core.pdb
 /Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.Infrastructure.pdb
 /Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.Repository.pdb
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.csproj.AssemblyReference.cache
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.AssemblyInfoInputs.cache
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.AssemblyInfo.cs
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.csproj.CoreCompileInputs.cache
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.MvcApplicationPartsAssemblyInfo.cs
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.MvcApplicationPartsAssemblyInfo.cache
 /Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/scopedcss/bundle/DMedics.API.styles.css
 /Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/staticwebassets/DMedics.API.StaticWebAssets.Manifest.cache
 /Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.RazorTargetAssemblyInfo.cache
 /Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.csproj.CopyComplete
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/ref/DMedics.API.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.pdb
 /Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.genruntimeconfig.cache

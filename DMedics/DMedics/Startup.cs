@@ -19,6 +19,7 @@ using DMedics.Repository;
 using DMedics.Services.Interfaces;
 using DMedics.Services.Services;
 using DMedics.Infrastructure;
+using DMedics.Repository.Repository;
 
 namespace DMedics
 {
@@ -54,6 +55,8 @@ namespace DMedics
             //Our own services - Scoped, Transient and Singelton Services
             //scoped - available throught out the lifetime of a request 
             services.AddScoped<IAppointmentService, AppointmentService>();
+
+            services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
 
 
 

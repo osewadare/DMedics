@@ -13,7 +13,7 @@ namespace DMedics.Services.Interfaces
         //create, get, book, update, cancel       
         List<AppointmentTypeResponseModel> GetAvailableAppointmentTypes();
 
-        List<CreatedAppointmentResponseModel> GetAvailableAppointmentDates();
+        List<CreatedAppointmentResponseModel> GetCreatedAppointmentDates();
 
         bool BookAppointment(AppointmentRequestModel appointment);
 
