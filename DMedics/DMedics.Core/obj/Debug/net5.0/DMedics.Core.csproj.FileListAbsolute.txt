@@ -21,3 +21,4 @@ C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics.C
 /Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Core/obj/Debug/net5.0/DMedics.Core.dll
 /Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Core/obj/Debug/net5.0/ref/DMedics.Core.dll
 /Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Core/obj/Debug/net5.0/DMedics.Core.pdb
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Core/obj/Debug/net5.0/DMedics.Core.csproj.AssemblyReference.cache

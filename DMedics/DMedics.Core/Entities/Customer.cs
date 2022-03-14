@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DMedics.Core.Enums;
 
 namespace DMedics.Core.Entities
 {
@@ -22,6 +23,8 @@ namespace DMedics.Core.Entities
 
         public DateTime DOB { get; set; }
 
+        public Gender Gender { get; set; }
+
         [Required]
         [MaxLength(50)]
         public string EmailAddress { get; set; }
@@ -37,6 +40,8 @@ namespace DMedics.Core.Entities
         [Required]
         [MaxLength(250)]
         public string ReferralSource { get; set; }
+
+        public string PaymentSecret { get; set; }
 
     }
 }

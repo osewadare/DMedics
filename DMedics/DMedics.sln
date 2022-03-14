@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DMedics.Services", "DMedics
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMedics.Repository", "DMedics.Repository\DMedics.Repository.csproj", "{D0F6EEFE-9836-4E17-B3F1-C378FEB4FC9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMedics.Test", "DMedics.Test\DMedics.Test.csproj", "{581D4736-5EF1-4169-8988-D6DB3E0DBBC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{D0F6EEFE-9836-4E17-B3F1-C378FEB4FC9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0F6EEFE-9836-4E17-B3F1-C378FEB4FC9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0F6EEFE-9836-4E17-B3F1-C378FEB4FC9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{581D4736-5EF1-4169-8988-D6DB3E0DBBC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{581D4736-5EF1-4169-8988-D6DB3E0DBBC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{581D4736-5EF1-4169-8988-D6DB3E0DBBC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{581D4736-5EF1-4169-8988-D6DB3E0DBBC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

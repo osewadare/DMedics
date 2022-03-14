@@ -8,4 +8,10 @@
     <ProjectReference Include="..\DMedics.Repository\DMedics.Repository.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Stripe.net" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Stripe.net" Version="39.97.0" />
+  </ItemGroup>
 </Project>

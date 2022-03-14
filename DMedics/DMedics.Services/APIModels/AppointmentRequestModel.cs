@@ -10,6 +10,8 @@ namespace DMedics.Services.APIModels
 {
     public class AppointmentRequestModel
     {
+
+        //Customer Information
         [Required]
         public string FirstName { get; set; }
 

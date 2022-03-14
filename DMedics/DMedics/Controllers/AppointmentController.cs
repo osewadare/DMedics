@@ -24,9 +24,9 @@ namespace DMedics.API.Controllers
 
         [HttpGet]
         [Route("GetCreatedAppointmentDates")]
-        public IActionResult GetCreatedAppointmentDates()
+        public IActionResult GetCreatedAppointmentDates(string clinicId)
         {
-            var response = _appointmentService.GetCreatedAppointmentDates();
+            var response = _appointmentService.GetCreatedAppointmentDates(clinicId);
             return Ok(response);
 
         }
@@ -36,16 +36,16 @@ namespace DMedics.API.Controllers
         [Route("GetAvailableAppointmentTypes")]
         public IActionResult GetAvailableAppointmentTypes()
         {
-            var response = _appointmentService.GetCreatedAppointmentDates();
+            var response = _appointmentService.GetAvailableAppointmentTypes();
             return Ok(response);
         }
 
 
         [HttpGet]
         [Route("BookAppointment")]
-        public IActionResult BookAppointment(AppointmentRequestModel requestModel)
+        public IActionResult CreateAppointmentBookingIntent(AppointmentRequestModel requestModel)
         {
-            var response = _appointmentService.BookAppointment(requestModel);
+            var response = _appointmentService.CreateAppointmentBookingIntent(requestModel);
             return Ok(response);
         }
     }

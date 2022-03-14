@@ -20,6 +20,7 @@ using DMedics.Services.Interfaces;
 using DMedics.Services.Services;
 using DMedics.Infrastructure;
 using DMedics.Repository.Repository;
+using Stripe;
 
 namespace DMedics
 {
@@ -65,6 +66,10 @@ namespace DMedics
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
+            StripeConfiguration.ApiKey = "sk_test_26PHem9AhJZvU623DfE1x4sd";
+
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -76,8 +81,15 @@ namespace DMedics
 
             app.UseRouting();
 
+            app.UseCors(builder => builder
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+
             app.UseAuthentication();
             app.UseAuthorization();
+
+
 
             app.UseEndpoints(endpoints =>
             {

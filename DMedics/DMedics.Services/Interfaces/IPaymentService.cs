@@ -8,6 +8,6 @@ namespace DMedics.Services.Interfaces
 {
     public interface IPaymentService
     {
-        
+        string CreatePaymentIntent();
     }
 }
