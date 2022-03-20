@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DMedics.Repository\DMedics.Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Stripe.net" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Stripe.net" Version="39.97.0" />
+  </ItemGroup>
+</Project>

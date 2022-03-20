@@ -1,0 +1,167 @@
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/appsettings.Development.json
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/appsettings.json
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.API.exe
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.API.deps.json
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.API.runtimeconfig.json
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.API.runtimeconfig.dev.json
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.API.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/ref/DMedics.API.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.API.pdb
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Azure.Core.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Azure.Identity.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Azure.Security.KeyVault.Certificates.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Azure.Security.KeyVault.Secrets.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Bcl.AsyncInterfaces.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Identity.Client.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Identity.Client.Extensions.Msal.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Identity.Web.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.IdentityModel.JsonWebTokens.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.IdentityModel.Logging.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.IdentityModel.Tokens.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.OpenApi.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Swashbuckle.AspNetCore.Swagger.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/System.IdentityModel.Tokens.Jwt.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/System.Security.Cryptography.ProtectedData.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.Core.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.Infrastructure.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.Services.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.Services.pdb
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.Core.pdb
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.Infrastructure.pdb
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.csproj.AssemblyReference.cache
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.AssemblyInfoInputs.cache
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.AssemblyInfo.cs
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.csproj.CoreCompileInputs.cache
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.MvcApplicationPartsAssemblyInfo.cs
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.MvcApplicationPartsAssemblyInfo.cache
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/obj/Debug/net5.0/staticwebassets/DMedics.API.StaticWebAssets.Manifest.cache
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/obj/Debug/net5.0/staticwebassets/DMedics.API.StaticWebAssets.xml
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/obj/Debug/net5.0/scopedcss/bundle/DMedics.API.styles.css
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.RazorTargetAssemblyInfo.cache
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.csproj.CopyComplete
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/obj/Debug/net5.0/ref/DMedics.API.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.pdb
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.genruntimeconfig.cache
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.Caching.Abstractions.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.DependencyInjection.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.Identity.Core.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.Identity.Stores.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.Logging.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.Logging.Abstractions.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.Options.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.Primitives.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/System.Diagnostics.DiagnosticSource.dll
+C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics/bin/Debug/net5.0/System.Runtime.CompilerServices.Unsafe.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/appsettings.Development.json
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/appsettings.json
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.API.StaticWebAssets.xml
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.API.deps.json
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.API.runtimeconfig.json
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.API.runtimeconfig.dev.json
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.API.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/ref/DMedics.API.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.API.pdb
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Azure.Core.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Azure.Identity.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Azure.Security.KeyVault.Certificates.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Azure.Security.KeyVault.Secrets.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Bcl.AsyncInterfaces.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Data.Sqlite.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.DotNet.PlatformAbstractions.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Sqlite.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.Caching.Abstractions.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.Configuration.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.Configuration.FileExtensions.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.Configuration.Json.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.DependencyModel.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.FileProviders.Physical.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.FileSystemGlobbing.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.Identity.Core.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.Identity.Stores.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.Logging.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.Options.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Extensions.Primitives.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Identity.Client.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Identity.Client.Extensions.Msal.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.Identity.Web.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.IdentityModel.Logging.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.IdentityModel.Tokens.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Microsoft.OpenApi.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/SQLitePCLRaw.batteries_v2.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/SQLitePCLRaw.nativelibrary.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/SQLitePCLRaw.core.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/SQLitePCLRaw.provider.dynamic_cdecl.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/System.Diagnostics.DiagnosticSource.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/System.Runtime.CompilerServices.Unsafe.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/System.Security.Cryptography.ProtectedData.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/System.Text.Encodings.Web.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/System.Text.Json.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/runtimes/alpine-x64/native/libe_sqlite3.so
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/runtimes/linux-arm/native/libe_sqlite3.so
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/runtimes/linux-arm64/native/libe_sqlite3.so
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/runtimes/linux-armel/native/libe_sqlite3.so
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/runtimes/linux-mips64/native/libe_sqlite3.so
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/runtimes/linux-musl-x64/native/libe_sqlite3.so
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/runtimes/linux-x64/native/libe_sqlite3.so
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/runtimes/linux-x86/native/libe_sqlite3.so
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/runtimes/osx-x64/native/libe_sqlite3.dylib
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/runtimes/win-arm/native/e_sqlite3.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/runtimes/win-arm64/native/e_sqlite3.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/runtimes/win-x64/native/e_sqlite3.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/runtimes/win-x86/native/e_sqlite3.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.Core.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.Infrastructure.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.Repository.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.Services.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.Services.pdb
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.Core.pdb
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.Infrastructure.pdb
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/bin/Debug/net5.0/DMedics.Repository.pdb
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.csproj.AssemblyReference.cache
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.AssemblyInfoInputs.cache
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.AssemblyInfo.cs
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.csproj.CoreCompileInputs.cache
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.MvcApplicationPartsAssemblyInfo.cs
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.MvcApplicationPartsAssemblyInfo.cache
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/scopedcss/bundle/DMedics.API.styles.css
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/staticwebassets/DMedics.API.StaticWebAssets.Manifest.cache
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.RazorTargetAssemblyInfo.cache
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.csproj.CopyComplete
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/ref/DMedics.API.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.pdb
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/obj/Debug/net5.0/DMedics.API.genruntimeconfig.cache
