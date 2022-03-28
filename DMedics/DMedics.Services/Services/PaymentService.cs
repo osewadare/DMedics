@@ -22,12 +22,12 @@ namespace DMedics.Services.Services
             var paymentIntentService = new PaymentIntentService();
             var paymentIntent = paymentIntentService.Create(new PaymentIntentCreateOptions
             {
-                Amount = 1,
-                Currency = "$",
-                AutomaticPaymentMethods = new PaymentIntentAutomaticPaymentMethodsOptions
+                Amount = 30,
+                Currency = "gbp",
+                PaymentMethodTypes = new List<string>
                 {
-                    Enabled = true,
-                },
+                "card",
+                }
             });
             return paymentIntent.ClientSecret;
         }

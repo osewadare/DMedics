@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DMedics.Core.Entities;
+using DMedics.Domain.Entities;
+using DMedics.Services.APIModels;
 
 namespace DMedics.Services.Interfaces
 {
     public interface IAuthenticationService
     {
-        //Login
-        ApplicationUser User (string UserId);
-        ApplicationUser Login();
-        //Logout
-        ApplicationUser Logout();
+        Task<IBaseResponse> SignUp(SignUpRequestModel signUpRequest);
 
-        //Forgot password
-        ApplicationUser GetPassword();
+        IBaseResponse ForgotPassword(ForgotPasswordViewModel model);
+
+        IBaseResponse ResetPassword(ResetPasswordViewModel model);
+
+        Task<TokenViewModel> Login(LoginRequestViewModel loginModel);
+
     }
 }

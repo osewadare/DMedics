@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DMedics.Infrastructure\DMedics.Infrastructure.csproj" />
+    <ProjectReference Include="..\DMedics.Domain\DMedics.Domain.csproj" />
   </ItemGroup>
-
 </Project>

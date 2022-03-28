@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DMedics.Services.APIModels
 {
-    public class BookedAppointmentResponseModel
+    public class BookedAppointmentResponseModel: IBaseResponse
     {
-        public string AppointmentId { get; set; }
+        public string AppointmentReference { get; set; }
 
         public string FirstName { get; set; }
 

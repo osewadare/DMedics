@@ -21,31 +21,45 @@ namespace DMedics.API.Controllers
         {
             _appointmentService = appointmentService;
         }
-
+        
         [HttpGet]
-        [Route("GetCreatedAppointmentDates")]
-        public IActionResult GetCreatedAppointmentDates(string clinicId)
+        [Route("get-created-appointment-dates")]
+        public IActionResult GetCreatedAppointmentDates([FromQuery]string clinicId)
         {
             var response = _appointmentService.GetCreatedAppointmentDates(clinicId);
             return Ok(response);
-
         }
 
+        [HttpGet]
+        [Route("get-clinics")]
+        public IActionResult GetClinics()
+        {
+            var response = _appointmentService.GetClinics();
+            return Ok(response);
+        }
 
         [HttpGet]
-        [Route("GetAvailableAppointmentTypes")]
+        [Route("get-available-appointment-types")]
         public IActionResult GetAvailableAppointmentTypes()
         {
             var response = _appointmentService.GetAvailableAppointmentTypes();
             return Ok(response);
         }
 
-
-        [HttpGet]
-        [Route("BookAppointment")]
+        [HttpPost]
+        [Route("create-appointment-booking-intent")]
         public IActionResult CreateAppointmentBookingIntent(AppointmentRequestModel requestModel)
         {
             var response = _appointmentService.CreateAppointmentBookingIntent(requestModel);
+            return Ok(response);
+        }
+
+
+        [HttpGet]
+        [Route("update-appointment-payment-status")]
+        public IActionResult UpdateAppointmentPaymentStatus([FromQuery]string paymentSecret, [FromQuery] string status)
+        {
+            var response = _appointmentService.UpdateAppointmentPaymentStatus(paymentSecret, status);
             return Ok(response);
         }
     }

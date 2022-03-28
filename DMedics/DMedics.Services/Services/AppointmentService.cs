@@ -1,4 +1,4 @@
-﻿using DMedics.Core.Entities;
+﻿using DMedics.Domain.Entities;
 using DMedics.Repository.Repository;
 using DMedics.Services.APIModels;
 using DMedics.Services.Interfaces;
@@ -7,7 +7,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using DMedics.Core.Enums;
+using DMedics.Domain.Enums;
+using DMedics.Services.Constants;
 
 namespace DMedics.Services.Services
 {
@@ -15,32 +16,39 @@ namespace DMedics.Services.Services
     {
 
         private IBaseRepository<Appointment> _appointmentRepo;
+        private IBaseRepository<Clinic> _clinicsRepo;
         private IBaseRepository<AppointmentType> _appointmentTypeRepo;
         private ILogger<AppointmentService> _logger;
-        private PaymentService _paymentService;
+        private IPaymentService _paymentService;
 
         public AppointmentService(IBaseRepository<Appointment> appointmentRepo,
             IBaseRepository<AppointmentType> appointmentTypeRepo,
-            ILogger<AppointmentService> logger, PaymentService paymentService)
+            ILogger<AppointmentService> logger, IPaymentService paymentService,
+            IBaseRepository<Clinic> clinicsRepo)
         {
             _appointmentRepo = appointmentRepo;
             _appointmentTypeRepo = appointmentTypeRepo;
             _logger = logger;
             _paymentService = paymentService;
+            _clinicsRepo = clinicsRepo;
         }
 
 
-        public List<AppointmentTypeResponseModel> GetAvailableAppointmentTypes()
+        public IBaseResponse GetAvailableAppointmentTypes()
         {
             try
             {
                 var appointmentTypes = _appointmentTypeRepo.GetAll().ToList();
-                var result = appointmentTypes.Select(x => new AppointmentTypeResponseModel
+                var appointmentTypesModel = appointmentTypes.Select(x => new AppointmentTypeModel
                 {
                     AppointmentTypeId = x.AppointmentTypeId,
                     TypeDescription = x.TypeDescription,
                     TypeTitle = x.TypeTitle
                 }).ToList();
+                var result = new AppointmentTypeResponseModel {
+                    appointmentTypes = appointmentTypesModel,
+                    StatusCode = StatusCodes.Successful,
+                    IsSuccessful = true};
                 return result;
             }
             catch (Exception e)
@@ -50,17 +58,44 @@ namespace DMedics.Services.Services
             }
         }
 
-        public List<CreatedAppointmentResponseModel> GetCreatedAppointmentDates(string clinicId)
+        public IBaseResponse GetClinics()
         {
             try
             {
-                Expression<Func<Appointment, bool>> expression = x => x.AppointmentStatus == Core.Enums.AppointmentStatus.Created && x.ClinicId == int.Parse(clinicId);
+                var clinics = _clinicsRepo.GetAll().ToList();
+                var clinicsModel = clinics.Select(x => new ClinicsModel
+                {
+                    ClinicId= x.ClinicId,
+                    Clinic = $"{x.ClinicName} {x.ClinicAddress}"
+                }).ToList();
+                var result = new ClinicsResponseModel
+                {
+                    clinicsResponse = clinicsModel,
+                    StatusCode = StatusCodes.Successful,
+                    IsSuccessful = true
+                };
+                return result;
+            }
+            catch (Exception e)
+            {
+                _logger.LogError("GetClinics Exception: e", e.Message);
+                return null;
+            }
+        }
+
+        public IBaseResponse GetCreatedAppointmentDates(string clinicId)
+        {
+            try
+            {
+                Expression<Func<Appointment, bool>> expression = x => x.AppointmentStatus == AppointmentStatus.Created && x.Clinic.ClinicId == int.Parse(clinicId);
                 var createdApppointments = _appointmentRepo.Find(expression).ToList();
-                var result = createdApppointments.Select(x => new CreatedAppointmentResponseModel
+                var createdAppointmentsModel = createdApppointments.Select(x => new CreatedAppointmentModel
                 {
                     AppointmentDateTime = x.AppointmentTime,
                     AppointmentId = x.AppointmentId.ToString()
                 }).ToList();
+
+                var result = new CreatedAppointmentResponseModel { createdAppointmentResponseModel = createdAppointmentsModel };
                 return result;
             }
             catch (Exception e)
@@ -70,25 +105,27 @@ namespace DMedics.Services.Services
             }
         }
 
-       
-
-        public string CreateAppointmentBookingIntent(AppointmentRequestModel appointment)
+        public IBaseResponse CreateAppointmentBookingIntent(AppointmentRequestModel appointment)
         {
             try
             {
-                Expression<Func<Appointment, bool>> expression = x => x.AppointmentId.ToString() == appointment.AppointmentId;
-                var createdApppointment = _appointmentRepo.Find(expression).FirstOrDefault();
+                var appointmentId = int.Parse(appointment.AppointmentId);
+                Expression<Func<Appointment, bool>> expression = x => x.AppointmentId == appointmentId;
+                var createdApppointment = _appointmentRepo.FindandInclude(expression, true).FirstOrDefault();
                 var appointmentNotAvailable = (createdApppointment.AppointmentStatus != AppointmentStatus.Created);
                 if (appointmentNotAvailable)
                 {
-                    return null;
+                    return new IBaseResponse
+                    {
+                        IsSuccessful = false,
+                        Message = "Appointment not found",
+                        StatusCode = StatusCodes.Successful
+                    };
                 }
                 else
                 {
                     //Create Payment Intent
-
                     var clientSecret = _paymentService.CreatePaymentIntent();
-
                     //Store in Database 
                     var customer = new Customer
                     {
@@ -97,42 +134,130 @@ namespace DMedics.Services.Services
                         DOB = DateTime.Parse(appointment.DOB),
                         EmailAddress = appointment.EmailAddress,
                         PhoneNumber = appointment.PhoneNumber,
-                        Gender = appointment.Gender,
-                        PaymentSecret = clientSecret  
+                        Gender = (Gender)Enum.Parse(typeof(Gender), appointment.Gender),
+                        PostCode = appointment.PostCode,
+                        ReferralSource = ""
                     };
-
-                    createdApppointment.AppointmentStatus = AppointmentStatus.Booked;
+                    //   createdApppointment.AppointmentStatus = AppointmentStatus.Booked;
+                    createdApppointment.PaymentSecret = clientSecret;
                     createdApppointment.Customer = customer;
-                    createdApppointment.AppointmentTypeId = int.Parse(appointment.AppointmentTypeId);
-                    createdApppointment.ClinicId = int.Parse(appointment.ClinicId);
+                    createdApppointment.AppointmentType.AppointmentTypeId = int.Parse(appointment.AppointmentTypeId);
                     _appointmentRepo.Update(createdApppointment);
-
-                    return clientSecret;
+                    return new IBaseResponse
+                    {
+                        StatusCode = StatusCodes.Successful,
+                        IsSuccessful = true,
+                        Message = clientSecret
+                    };
                 }
                 
             }
             catch (Exception e)
             {
                 _logger.LogError("GetCreatedAppointmentDates Exception: e", e.Message);
-                return null;
+                return new IBaseResponse
+                {
+                    StatusCode = StatusCodes.GeneralError,
+                    IsSuccessful = false,
+                    Message = "Sorry you request could not be completed. Please try again"
+                };
             }
         }
 
-        public BookedAppointmentResponseModel GetAppointment(int AppointmentId)
+        public IBaseResponse GetAppointment(string appointmentReference)
         {
-            throw new NotImplementedException();
+            try
+            {
+                //Lambda expression tree from a delegate that checks if appointment reference is matched
+                Expression<Func<Appointment, bool>> expression = x => x.AppointmentReference == appointmentReference;
+                var appointment = _appointmentRepo.Find(expression).FirstOrDefault();
+                if(appointment == null)
+                {
+                    return new IBaseResponse
+                    {
+                        StatusCode = StatusCodes.Successful,
+                        IsSuccessful = false,
+                        Message = "No Appointment found"
+                    };
+                }
+                var response = new BookedAppointmentResponseModel
+                {
+                    AppointmentDateTime = appointment.AppointmentTime.ToLongDateString(),
+                    AppointmentReference = appointment.AppointmentReference,
+                    Clinic = appointment.Clinic.ClinicName,
+                    FirstName = appointment.Customer.FirstName,
+                    IsSuccessful = true,
+                    StatusCode = StatusCodes.Successful,
+                    Message = "success"
+                };
+
+                return response;
+                   
+            }
+            catch(Exception e)
+            {
+                _logger.LogError("GetCreatedAppointmentDates Exception: e", e.Message);
+                return new IBaseResponse
+                {
+                    StatusCode = StatusCodes.GeneralError,
+                    IsSuccessful = false,
+                    Message = "Sorry you request could not be completed. Please try again"
+                };
+            }
         }
 
         //Sprint 2
-
-        public bool CreateAppointment(int AppointmentTypeId, int AppointmentId)
+        public IBaseResponse CreateAppointment(int AppointmentTypeId, int AppointmentId)
         {
             throw new NotImplementedException();
         }
 
-        public Appointment UpdateAppointment(int AppointmentId)
+        public IBaseResponse UpdateAppointment(int AppointmentId)
         {
             throw new NotImplementedException();
+        }
+
+        public IBaseResponse UpdateAppointmentPaymentStatus(string paymentIntent, string redirectStatus)
+        {
+            try
+            {
+                Expression<Func<Appointment, bool>> expression = x => x.PaymentSecret == paymentIntent;
+                var appointment = _appointmentRepo.Find(expression).FirstOrDefault();
+                if (appointment == null)
+                {
+                    return new IBaseResponse
+                    {
+                        StatusCode = StatusCodes.Successful,
+                        IsSuccessful = false,
+                        Message = "No Appointment found"
+                    };
+                }
+                appointment.AppointmentStatus = (redirectStatus == PaymentStatus.succeeded.ToString()) ? AppointmentStatus.Booked :
+                                                (redirectStatus == PaymentStatus.processing.ToString()) ? AppointmentStatus.PaymentProcessing :
+                                                (redirectStatus == PaymentStatus.requires_payment_method.ToString()) ? AppointmentStatus.PaymentFailed :
+                                                 AppointmentStatus.PaymentStatusUnknown;
+
+                var bookingReference = Guid.NewGuid().ToString().Substring(0, 6);
+                appointment.AppointmentReference = bookingReference;
+                _appointmentRepo.Update(appointment);
+                return new IBaseResponse
+                {
+                    StatusCode = StatusCodes.Successful,
+                    IsSuccessful = true,
+                    Message = bookingReference
+                };
+
+            }
+            catch (Exception e)
+            {
+                _logger.LogError("GetCreatedAppointmentDates Exception: e", e.Message);
+                return new IBaseResponse
+                {
+                    StatusCode = StatusCodes.GeneralError,
+                    IsSuccessful = false,
+                    Message = "Sorry you request could not be completed. Please try again"
+                };
+            }
         }
     }
 }

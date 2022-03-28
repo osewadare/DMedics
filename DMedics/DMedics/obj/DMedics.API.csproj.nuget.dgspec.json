@@ -4,14 +4,14 @@
     "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics/DMedics.API.csproj": {}
   },
   "projects": {
-    "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Core/DMedics.Core.csproj": {
+    "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Domain/DMedics.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Core/DMedics.Core.csproj",
-        "projectName": "DMedics.Core",
-        "projectPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Core/DMedics.Core.csproj",
+        "projectUniqueName": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Domain/DMedics.Domain.csproj",
+        "projectName": "DMedics.Domain",
+        "projectPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Domain/DMedics.Domain.csproj",
         "packagesPath": "/Users/dareosewa/.nuget/packages/",
-        "outputPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Core/obj/",
+        "outputPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Domain/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.103/RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -94,8 +94,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Core/DMedics.Core.csproj": {
-                "projectPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Core/DMedics.Core.csproj"
+              "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Services/DMedics.Services.csproj": {
+                "projectPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Services/DMedics.Services.csproj"
               }
             }
           }
@@ -135,6 +135,10 @@
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             }
           },
           "imports": [
@@ -152,7 +156,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.103/RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -181,8 +185,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/DMedics.Infrastructure.csproj": {
-                "projectPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/DMedics.Infrastructure.csproj"
+              "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Domain/DMedics.Domain.csproj": {
+                "projectPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Domain/DMedics.Domain.csproj"
               }
             }
           }
@@ -211,7 +215,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.103/RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -256,6 +260,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Stripe.net": {
               "target": "Package",
               "version": "[39.97.0, )"
@@ -276,7 +284,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.103/RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -305,6 +313,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/DMedics.Infrastructure.csproj": {
+                "projectPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/DMedics.Infrastructure.csproj"
+              },
               "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Services/DMedics.Services.csproj": {
                 "projectPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Services/DMedics.Services.csproj"
               }
@@ -356,7 +367,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.103/RuntimeIdentifierGraph.json"
         }
       }
     }

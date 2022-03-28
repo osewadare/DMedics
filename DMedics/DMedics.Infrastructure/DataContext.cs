@@ -1,4 +1,4 @@
-﻿using DMedics.Core.Entities;
+﻿using DMedics.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using System;
@@ -13,11 +13,15 @@ namespace DMedics.Infrastructure
     public class DataContext: IdentityDbContext<ApplicationUser>
     {
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
-            optionsBuilder.UseSqlite($"Filename=TestSqlite");
+            Database.EnsureCreated();
         }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlite($"Filename=TestDb");
+        }
 
         public DbSet<Appointment> Appointments { get; set; }
         public DbSet<AppointmentType> AppointmentTypes { get; set; }

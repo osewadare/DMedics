@@ -16,8 +16,12 @@ C:/Users/Chinonso Mfon-Eddie/OneDrive/Documents/GitHub/DMedics/DMedics/DMedics.I
 /Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/bin/Debug/net5.0/DMedics.Infrastructure.dll
 /Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/bin/Debug/net5.0/ref/DMedics.Infrastructure.dll
 /Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/bin/Debug/net5.0/DMedics.Infrastructure.pdb
-/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/bin/Debug/net5.0/DMedics.Core.dll
-/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/bin/Debug/net5.0/DMedics.Core.pdb
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/bin/Debug/net5.0/DMedics.Domain.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/bin/Debug/net5.0/DMedics.Repository.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/bin/Debug/net5.0/DMedics.Services.dll
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/bin/Debug/net5.0/DMedics.Services.pdb
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/bin/Debug/net5.0/DMedics.Domain.pdb
+/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/bin/Debug/net5.0/DMedics.Repository.pdb
 /Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/obj/Debug/net5.0/DMedics.Infrastructure.csproj.AssemblyReference.cache
 /Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/obj/Debug/net5.0/DMedics.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 /Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/obj/Debug/net5.0/DMedics.Infrastructure.AssemblyInfoInputs.cache

@@ -1,23 +1,44 @@
 ﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{B72C39AA-EC3F-47AF-9EB6-BFCAC8273987}|DMedics">
   <MonoDevelop.Ide.ItemProperties.DMedics.API PreferredExecutionTarget="/Applications/Firefox.app" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="DMedics/Controllers/AppointmentController.cs">
     <Files>
-      <File FileName="DMedics/Startup.cs" Line="72" Column="1" />
-      <File FileName="DMedics.Services/Services/AppointmentService.cs" Line="75" Column="53" />
-      <File FileName="DMedics.Services/Interfaces/IAppointmentService.cs" Line="25" Column="1" />
+      <File FileName="DMedics/Controllers/AppointmentController.cs" Line="63" Column="16" />
+      <File FileName="DMedics.Services/APIModels/AppointmentRequestModel.cs" />
+      <File FileName="DMedics.Domain/Enums/Gender.cs" />
+      <File FileName="DMedics.Services/Services/AppointmentService.cs" />
+      <File FileName="DMedics.Infrastructure/BaseRepository.cs" />
+      <File FileName="DMedics.Domain/Entities/Appointment.cs" />
+      <File FileName="DMedics.Infrastructure/DataContext.cs" />
+      <File FileName="DMedics.Services/Services/AuthenticationService.cs" />
+      <File FileName="DMedics.Services/Services/CustomerService.cs" />
+      <File FileName="DMedics.Services/Interfaces/IAuthenticationService.cs" />
+      <File FileName="DMedics.Services/APIModels/SignUpRequestModel.cs" />
+      <File FileName="DMedics.Services/APIModels/ForgotPasswordViewModel.cs" />
+      <File FileName="DMedics.Services/APIModels/ResetPasswordViewModel.cs" />
+      <File FileName="DMedics.Services/APIModels/LoginRequestViewModel.cs" />
+      <File FileName="DMedics.Services/APIModels/TokenViewModel.cs" />
+      <File FileName="DMedics.Services/Settings/JwtSecurityTokenSettings.cs" />
+      <File FileName="DMedics.Services/Constants/ResponseMessages.cs" />
+      <File FileName="DMedics.Services/Constants/StatusCodes.cs" />
+      <File FileName="DMedics/Controllers/AuthenticationController.cs" />
+      <File FileName="DMedics.Services/Injection.cs" />
+      <File FileName="DMedics/Program.cs" />
+      <File FileName="DMedics/Startup.cs" />
+      <File FileName="DMedics.Infrastructure/Injection.cs" />
+      <File FileName="DMedics.Domain/Entities/ApplicationUser.cs" />
+      <File FileName="DMedics.Domain/Entities/Customer.cs" />
+      <File FileName="DMedics.Services/Services/PaymentService.cs" />
       <File FileName="DMedics.Services/APIModels/CreatedAppointmentResponseModel.cs" />
-      <File FileName="DMedics/Program.cs" Line="16" Column="1" />
-      <File FileName="DMedics.Test/Class1.cs" Line="1" Column="1" />
-      <File FileName="DMedics.Services/APIModels/AppointmentRequestModel.cs" Line="32" Column="1" />
-      <File FileName="DMedics/Controllers/AppointmentController.cs" Line="42" Column="1" />
-      <File FileName="DMedics.Core/Entities/Customer.cs" Line="43" Column="1" />
-      <File FileName="DMedics.Core/Entities/Appointment.cs" Line="39" Column="34" />
-      <File FileName="DMedics.Repository/Repository/IBaseRepository.cs" Line="19" Column="37" />
-      <File FileName="DMedics.Repository/Repository/BaseRepository.cs" Line="55" Column="37" />
-      <File FileName="DMedics.Services/Services/PaymentService.cs" Line="12" Column="32" />
-      <File FileName="DMedics/Controllers/PaymentController.cs" Line="23" Column="41" />
-      <File FileName="DMedics.Services/Interfaces/IPaymentService.cs" Line="11" Column="38" />
-      <File FileName="DMedics.Core/Enums/AppointmentStatus.cs" Line="7" Column="34" />
+      <File FileName="DMedics.Services/APIModels/AppointmentTypeResponseModel.cs" />
+      <File FileName="DMedics.Services/APIModels/ClinicsResponseModel.cs" />
+      <File FileName="DMedics.Domain/Entities/Clinic.cs" />
+      <File FileName="DMedics.Services/APIModels/BookedAppointmentResponseModel.cs" />
+      <File FileName="DMedics.Services/Interfaces/IAppointmentService.cs" />
+      <File FileName="DMedics.Repository/Repository/IBaseRepository.cs" />
+      <File FileName="DMedics.Services/APIModels/BaseResponse.cs" />
+      <File FileName="DMedics.Services/APIModels/PaymentStatusUpdateRequestModel.cs" />
+      <File FileName="DMedics.Domain/Enums/PaymentStatus.cs" />
+      <File FileName="DMedics.Domain/Enums/AppointmentStatus.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -28,7 +49,7 @@
                 <Node name="AppointmentController.cs" selected="True" />
               </Node>
             </Node>
-            <Node name="DMedics.Core" expanded="True">
+            <Node name="DMedics.Domain" expanded="True">
               <Node name="Entities" expanded="True" />
               <Node name="Enums" expanded="True" />
             </Node>
@@ -37,21 +58,19 @@
               <Node name="Repository" expanded="True" />
             </Node>
             <Node name="DMedics.Services" expanded="True">
-              <Node name="APIModels" expanded="True" />
-              <Node name="Interfaces" expanded="True" />
               <Node name="Services" expanded="True" />
             </Node>
-            <Node name="DMedics.Test" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.DMedics.Test FirstBuild="True" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Services/Services/AuthenticationService.cs" relfile="DMedics.Services/Services/AuthenticationService.cs" line="54" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

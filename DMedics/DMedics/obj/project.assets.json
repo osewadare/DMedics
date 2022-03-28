@@ -1392,7 +1392,7 @@
           }
         }
       },
-      "DMedics.Core/1.0.0": {
+      "DMedics.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
@@ -1400,22 +1400,23 @@
           "Microsoft.Extensions.Identity.Stores": "6.0.2"
         },
         "compile": {
-          "bin/placeholder/DMedics.Core.dll": {}
+          "bin/placeholder/DMedics.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/DMedics.Core.dll": {}
+          "bin/placeholder/DMedics.Domain.dll": {}
         }
       },
       "DMedics.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "DMedics.Core": "1.0.0",
+          "DMedics.Services": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.15",
           "Microsoft.EntityFrameworkCore": "5.0.15",
           "Microsoft.EntityFrameworkCore.Sqlite": "5.0.15",
           "Microsoft.Extensions.Configuration": "6.0.1",
-          "Microsoft.Extensions.Configuration.Json": "6.0.0"
+          "Microsoft.Extensions.Configuration.Json": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection": "6.0.0"
         },
         "compile": {
           "bin/placeholder/DMedics.Infrastructure.dll": {}
@@ -1428,7 +1429,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "DMedics.Infrastructure": "1.0.0"
+          "DMedics.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/DMedics.Repository.dll": {}
@@ -1442,6 +1443,7 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "DMedics.Repository": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
           "Stripe.net": "39.97.0"
         },
         "compile": {
@@ -3741,10 +3743,10 @@
         "version.txt"
       ]
     },
-    "DMedics.Core/1.0.0": {
+    "DMedics.Domain/1.0.0": {
       "type": "project",
-      "path": "../DMedics.Core/DMedics.Core.csproj",
-      "msbuildProject": "../DMedics.Core/DMedics.Core.csproj"
+      "path": "../DMedics.Domain/DMedics.Domain.csproj",
+      "msbuildProject": "../DMedics.Domain/DMedics.Domain.csproj"
     },
     "DMedics.Infrastructure/1.0.0": {
       "type": "project",
@@ -3764,6 +3766,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "DMedics.Infrastructure >= 1.0.0",
       "DMedics.Services >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.11",
       "Microsoft.AspNetCore.Authentication.OpenIdConnect >= 5.0.11",
@@ -3800,6 +3803,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/DMedics.Infrastructure.csproj": {
+              "projectPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Infrastructure/DMedics.Infrastructure.csproj"
+            },
             "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Services/DMedics.Services.csproj": {
               "projectPath": "/Users/dareosewa/Desktop/DMedics/DMedics/DMedics.Services/DMedics.Services.csproj"
             }
@@ -3851,7 +3857,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.103/RuntimeIdentifierGraph.json"
       }
     }
   }

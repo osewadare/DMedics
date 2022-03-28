@@ -10,8 +10,16 @@
 
   <ItemGroup>
     <None Remove="Stripe.net" />
+    <None Remove="Microsoft.Extensions.DependencyInjection" />
+    <None Remove="Constants\" />
+    <None Remove="Settings\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Stripe.net" Version="39.97.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Constants\" />
+    <Folder Include="Settings\" />
   </ItemGroup>
 </Project>
