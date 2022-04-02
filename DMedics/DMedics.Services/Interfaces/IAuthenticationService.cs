@@ -18,5 +18,8 @@ namespace DMedics.Services.Interfaces
 
         Task<BaseResponse> CreateToken(LoginViewModel loginModel);
 
+
+        BaseResponse GetUsers();
+
     }
 }

@@ -71,5 +71,23 @@ namespace DMedics.API.Controllers
             var response = _appointmentService.GetAppointment(appointmentReference);
             return Ok(response);
         }
+
+
+        [HttpPost]
+        [Route("create-appointment")]
+        public IActionResult CreateAppointment(CreateAppointmentRequestModel requestModel)
+        {
+            var response = _appointmentService.CreateAppointment(requestModel);
+            return Ok(response);
+        }
+
+
+        [HttpPost]
+        [Route("update-appointment")]
+        public IActionResult UpdateAppointment(CreateAppointmentRequestModel requestModel)
+        {
+            var response = _appointmentService.UpdateAppointment(requestModel);
+            return Ok(response);
+        }
     }
 }

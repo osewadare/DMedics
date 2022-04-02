@@ -203,6 +203,36 @@ namespace DMedics.Services.Services
             return string.Empty;
         }
 
+        public BaseResponse GetUsers()
+        {
+            try
+            {
+                var users = _userManager.Users.ToList();
+                var usersViewModel = new UsersViewModel
+                {
+                    Users = users?.Select(x => new UsersModel
+                    {
+                        UserId = x.Id,
+                        Name = $"{x.FirstName} {x.LastName}"
+                    }).ToList(),
+                    StatusCode = StatusCodes.Successful,
+                    IsSuccessful = true,
+                    Message = "success"
+               };
+
+               return usersViewModel;
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation($"GetUsers Exception: {e}");
+                return new BaseResponse
+                {
+                    IsSuccessful = false,
+                    StatusCode = StatusCodes.FatalError,
+                    Message = Messages.ExceptionMessage
+                };
+            }
+        }
     }
 
   

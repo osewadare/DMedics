@@ -21,11 +21,15 @@ namespace DMedics.Domain.Entities
         public AppointmentType AppointmentType { get; set; }
 
         //Navigation Property
+        [ForeignKey(nameof(ApplicationUser))]
+        public string ApplicationUserId { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
 
         public DateTime AppointmentTime { get; set; }
 
         //Navigation Property
+        [ForeignKey(nameof(ClinicId))]
+        public int? ClinicId { get; set; }
         public Clinic Clinic { get; set; }
         
         //Navigation Property

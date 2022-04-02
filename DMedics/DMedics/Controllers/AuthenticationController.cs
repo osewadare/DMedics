@@ -44,5 +44,18 @@ namespace DMedics.API.Controllers
             return Ok(response);
 
         }
+
+
+        [HttpGet]
+        [Route("get-users")]
+        public IActionResult GetUsers()
+        {
+            var response = _authService.GetUsers();
+            return Ok(response);
+
+        }
+
+
+
     }
 }

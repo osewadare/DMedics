@@ -25,10 +25,9 @@ namespace DMedics.Services.Interfaces
 
         BaseResponse GetAppointment(string appointmentReference);
 
-        //Sprint 2
-        BaseResponse CreateAppointment(int AppointmentTypeId, int AppointmentId);
+        BaseResponse CreateAppointment(CreateAppointmentRequestModel createAppointmentRequestModel);
 
-        BaseResponse UpdateAppointment(int AppointmentId);
+        BaseResponse UpdateAppointment(CreateAppointmentRequestModel createAppointmentRequestModel);
 
 
     }

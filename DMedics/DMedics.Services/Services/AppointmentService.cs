@@ -209,15 +209,64 @@ namespace DMedics.Services.Services
             }
         }
 
-        //Sprint 2
-        public BaseResponse CreateAppointment(int AppointmentTypeId, int AppointmentId)
+        public BaseResponse CreateAppointment(CreateAppointmentRequestModel createAppointmentRequestModel)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var appointment = new Appointment
+                {
+                    AppointmentStatus = AppointmentStatus.Created,
+                    ClinicId = int.Parse(createAppointmentRequestModel.ClinicId),
+                    ApplicationUserId = createAppointmentRequestModel.UserId,
+                    AppointmentTime = DateTime.Parse(createAppointmentRequestModel.AppointmentDateTime),
+                };
+                 _appointmentRepo.Add(appointment);
+                    return new BaseResponse
+                    {
+                        StatusCode = StatusCodes.Successful,
+                        IsSuccessful = true,
+                        Message = "success"
+                    };
+            }
+            catch (Exception e)
+            {
+                _logger.LogError("CreateAppointment Exception: e", e.Message);
+                return new BaseResponse
+                {
+                    StatusCode = StatusCodes.GeneralError,
+                    IsSuccessful = false,
+                    Message = "Sorry you request could not be completed. Please try again"
+                };
+            }
         }
 
-        public BaseResponse UpdateAppointment(int AppointmentId)
+        public BaseResponse UpdateAppointment(CreateAppointmentRequestModel createAppointmentRequestModel)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var appointmentId = int.Parse(createAppointmentRequestModel.AppointmentId);
+                Expression<Func<Appointment, bool>> expression = x => x.AppointmentId == appointmentId;
+                var createdApppointment = _appointmentRepo.FindandInclude(expression, true).FirstOrDefault();
+                createdApppointment.ClinicId = int.Parse(createAppointmentRequestModel.ClinicId);
+                createdApppointment.ApplicationUserId = createAppointmentRequestModel.UserId;
+                _appointmentRepo.Update(createdApppointment);
+                return new BaseResponse
+                {
+                    StatusCode = StatusCodes.Successful,
+                    IsSuccessful = true,
+                    Message = "success"
+                };
+            }
+            catch (Exception e)
+            {
+                _logger.LogError("UpdateAppointment Exception: e", e.Message);
+                return new BaseResponse
+                {
+                    StatusCode = StatusCodes.GeneralError,
+                    IsSuccessful = false,
+                    Message = "Sorry you request could not be completed. Please try again"
+                };
+            }
         }
 
         public BaseResponse UpdateAppointmentPaymentStatus(string paymentIntent, string redirectStatus)
