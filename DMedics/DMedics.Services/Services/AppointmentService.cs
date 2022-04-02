@@ -34,7 +34,7 @@ namespace DMedics.Services.Services
         }
 
 
-        public IBaseResponse GetAvailableAppointmentTypes()
+        public BaseResponse GetAvailableAppointmentTypes()
         {
             try
             {
@@ -45,10 +45,12 @@ namespace DMedics.Services.Services
                     TypeDescription = x.TypeDescription,
                     TypeTitle = x.TypeTitle
                 }).ToList();
-                var result = new AppointmentTypeResponseModel {
+                var result = new AppointmentTypeResponseModel
+                {
                     appointmentTypes = appointmentTypesModel,
                     StatusCode = StatusCodes.Successful,
-                    IsSuccessful = true};
+                    IsSuccessful = true
+                };
                 return result;
             }
             catch (Exception e)
@@ -58,7 +60,7 @@ namespace DMedics.Services.Services
             }
         }
 
-        public IBaseResponse GetClinics()
+        public BaseResponse GetClinics()
         {
             try
             {
@@ -83,7 +85,7 @@ namespace DMedics.Services.Services
             }
         }
 
-        public IBaseResponse GetCreatedAppointmentDates(string clinicId)
+        public BaseResponse GetCreatedAppointmentDates(string clinicId)
         {
             try
             {
@@ -105,7 +107,7 @@ namespace DMedics.Services.Services
             }
         }
 
-        public IBaseResponse CreateAppointmentBookingIntent(AppointmentRequestModel appointment)
+        public BaseResponse CreateAppointmentBookingIntent(AppointmentRequestModel appointment)
         {
             try
             {
@@ -115,7 +117,7 @@ namespace DMedics.Services.Services
                 var appointmentNotAvailable = (createdApppointment.AppointmentStatus != AppointmentStatus.Created);
                 if (appointmentNotAvailable)
                 {
-                    return new IBaseResponse
+                    return new BaseResponse
                     {
                         IsSuccessful = false,
                         Message = "Appointment not found",
@@ -143,7 +145,7 @@ namespace DMedics.Services.Services
                     createdApppointment.Customer = customer;
                     createdApppointment.AppointmentType.AppointmentTypeId = int.Parse(appointment.AppointmentTypeId);
                     _appointmentRepo.Update(createdApppointment);
-                    return new IBaseResponse
+                    return new BaseResponse
                     {
                         StatusCode = StatusCodes.Successful,
                         IsSuccessful = true,
@@ -155,7 +157,7 @@ namespace DMedics.Services.Services
             catch (Exception e)
             {
                 _logger.LogError("GetCreatedAppointmentDates Exception: e", e.Message);
-                return new IBaseResponse
+                return new BaseResponse
                 {
                     StatusCode = StatusCodes.GeneralError,
                     IsSuccessful = false,
@@ -164,16 +166,17 @@ namespace DMedics.Services.Services
             }
         }
 
-        public IBaseResponse GetAppointment(string appointmentReference)
+        public BaseResponse GetAppointment(string appointmentReference)
         {
             try
             {
+                var _dare = "dare";
                 //Lambda expression tree from a delegate that checks if appointment reference is matched
-                Expression<Func<Appointment, bool>> expression = x => x.AppointmentReference == appointmentReference;
-                var appointment = _appointmentRepo.Find(expression).FirstOrDefault();
-                if(appointment == null)
+                Expression <Func<Appointment, bool>> expression = x => x.AppointmentReference == appointmentReference;
+                var appointment = _appointmentRepo.FindandInclude(expression, true).FirstOrDefault();
+                if (appointment == null)
                 {
-                    return new IBaseResponse
+                    return new BaseResponse
                     {
                         StatusCode = StatusCodes.Successful,
                         IsSuccessful = false,
@@ -182,7 +185,7 @@ namespace DMedics.Services.Services
                 }
                 var response = new BookedAppointmentResponseModel
                 {
-                    AppointmentDateTime = appointment.AppointmentTime.ToLongDateString(),
+                    AppointmentDateTime = appointment.AppointmentTime.ToString(),
                     AppointmentReference = appointment.AppointmentReference,
                     Clinic = appointment.Clinic.ClinicName,
                     FirstName = appointment.Customer.FirstName,
@@ -197,7 +200,7 @@ namespace DMedics.Services.Services
             catch(Exception e)
             {
                 _logger.LogError("GetCreatedAppointmentDates Exception: e", e.Message);
-                return new IBaseResponse
+                return new BaseResponse
                 {
                     StatusCode = StatusCodes.GeneralError,
                     IsSuccessful = false,
@@ -207,17 +210,17 @@ namespace DMedics.Services.Services
         }
 
         //Sprint 2
-        public IBaseResponse CreateAppointment(int AppointmentTypeId, int AppointmentId)
+        public BaseResponse CreateAppointment(int AppointmentTypeId, int AppointmentId)
         {
             throw new NotImplementedException();
         }
 
-        public IBaseResponse UpdateAppointment(int AppointmentId)
+        public BaseResponse UpdateAppointment(int AppointmentId)
         {
             throw new NotImplementedException();
         }
 
-        public IBaseResponse UpdateAppointmentPaymentStatus(string paymentIntent, string redirectStatus)
+        public BaseResponse UpdateAppointmentPaymentStatus(string paymentIntent, string redirectStatus)
         {
             try
             {
@@ -225,7 +228,7 @@ namespace DMedics.Services.Services
                 var appointment = _appointmentRepo.Find(expression).FirstOrDefault();
                 if (appointment == null)
                 {
-                    return new IBaseResponse
+                    return new BaseResponse
                     {
                         StatusCode = StatusCodes.Successful,
                         IsSuccessful = false,
@@ -240,7 +243,7 @@ namespace DMedics.Services.Services
                 var bookingReference = Guid.NewGuid().ToString().Substring(0, 6);
                 appointment.AppointmentReference = bookingReference;
                 _appointmentRepo.Update(appointment);
-                return new IBaseResponse
+                return new BaseResponse
                 {
                     StatusCode = StatusCodes.Successful,
                     IsSuccessful = true,
@@ -251,7 +254,7 @@ namespace DMedics.Services.Services
             catch (Exception e)
             {
                 _logger.LogError("GetCreatedAppointmentDates Exception: e", e.Message);
-                return new IBaseResponse
+                return new BaseResponse
                 {
                     StatusCode = StatusCodes.GeneralError,
                     IsSuccessful = false,

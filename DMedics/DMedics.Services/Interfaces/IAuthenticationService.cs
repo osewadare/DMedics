@@ -10,13 +10,13 @@ namespace DMedics.Services.Interfaces
 {
     public interface IAuthenticationService
     {
-        Task<IBaseResponse> SignUp(SignUpRequestModel signUpRequest);
+        Task<BaseResponse> SignUp(SignUpRequestModel signUpRequest);
 
-        IBaseResponse ForgotPassword(ForgotPasswordViewModel model);
+        BaseResponse ForgotPassword(ForgotPasswordViewModel model);
 
-        IBaseResponse ResetPassword(ResetPasswordViewModel model);
+        BaseResponse ResetPassword(ResetPasswordViewModel model);
 
-        Task<TokenViewModel> Login(LoginRequestViewModel loginModel);
+        Task<BaseResponse> CreateToken(LoginViewModel loginModel);
 
     }
 }

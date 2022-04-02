@@ -35,8 +35,8 @@ namespace DMedics
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddMicrosoftIdentityWebApi(Configuration.GetSection("AzureAd"));
+           // services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+               // .AddMicrosoftIdentityWebApi(Configuration.GetSection("AzureAd"));
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -47,8 +47,7 @@ namespace DMedics
 
 
             //Sets up Infrastructure services - 
-            services.RegisterInfrastructureServices(Configuration);
-
+            services.RegisterInfrastructureServices(Configuration, Configuration["JwtSecurityToken:Issuer"], Configuration["JwtSecurityToken:Audience"], Configuration["JwtSecurityToken:Key"]);
 
             //Sets up Application services
             services.RegisterApplicationServices(Configuration);

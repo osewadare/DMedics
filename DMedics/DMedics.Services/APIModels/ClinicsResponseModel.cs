@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace DMedics.Services.APIModels
 {
 
-    public class ClinicsResponseModel : IBaseResponse
+    public class ClinicsResponseModel : BaseResponse
     {
         public List<ClinicsModel> clinicsResponse { get; set; }
     }

@@ -62,5 +62,14 @@ namespace DMedics.API.Controllers
             var response = _appointmentService.UpdateAppointmentPaymentStatus(paymentSecret, status);
             return Ok(response);
         }
+
+
+        [HttpGet]
+        [Route("get-appointment")]
+        public IActionResult GetAppointment([FromQuery]string appointmentReference)
+        {
+            var response = _appointmentService.GetAppointment(appointmentReference);
+            return Ok(response);
+        }
     }
 }

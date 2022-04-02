@@ -34,5 +34,15 @@ namespace DMedics.API.Controllers
             var response = await _authService.SignUp(model);
             return Ok(response);
         }
+
+
+        [HttpPost]
+        [Route("login")]
+        public async Task<IActionResult> CreateToken([FromBody] LoginViewModel model)
+        {
+            var response = await _authService.CreateToken(model);
+            return Ok(response);
+
+        }
     }
 }

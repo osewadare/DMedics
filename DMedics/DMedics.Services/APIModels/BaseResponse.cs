@@ -1,7 +1,7 @@
 ﻿using System;
 namespace DMedics.Services.APIModels
 {
-    public class IBaseResponse
+    public class BaseResponse
     {
         public bool IsSuccessful { get; set; }
         public string Message { get; set; }

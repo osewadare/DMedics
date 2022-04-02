@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DMedics.Services.APIModels
 {
-    public class CreatedAppointmentResponseModel: IBaseResponse
+    public class CreatedAppointmentResponseModel: BaseResponse
     {
         public List<CreatedAppointmentModel> createdAppointmentResponseModel { get; set; }
     }

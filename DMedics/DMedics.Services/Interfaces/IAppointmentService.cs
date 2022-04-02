@@ -13,22 +13,22 @@ namespace DMedics.Services.Interfaces
 
 
         //Assumption - appointments are created for specific clinics but all appointment types are available in all clcinics
-        IBaseResponse GetCreatedAppointmentDates(string clinicId);
+        BaseResponse GetCreatedAppointmentDates(string clinicId);
 
-        IBaseResponse GetClinics();
+        BaseResponse GetClinics();
 
-        IBaseResponse GetAvailableAppointmentTypes();
+        BaseResponse GetAvailableAppointmentTypes();
 
-        IBaseResponse CreateAppointmentBookingIntent(AppointmentRequestModel appointment);
+        BaseResponse CreateAppointmentBookingIntent(AppointmentRequestModel appointment);
 
-        IBaseResponse UpdateAppointmentPaymentStatus(string paymentIntent, string redirectStatus);
+        BaseResponse UpdateAppointmentPaymentStatus(string paymentIntent, string redirectStatus);
 
-        IBaseResponse GetAppointment(string appointmentReference);
+        BaseResponse GetAppointment(string appointmentReference);
 
         //Sprint 2
-        IBaseResponse CreateAppointment(int AppointmentTypeId, int AppointmentId);
+        BaseResponse CreateAppointment(int AppointmentTypeId, int AppointmentId);
 
-        IBaseResponse UpdateAppointment(int AppointmentId);
+        BaseResponse UpdateAppointment(int AppointmentId);
 
 
     }

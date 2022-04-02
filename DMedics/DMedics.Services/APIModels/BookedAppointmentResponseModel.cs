@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DMedics.Services.APIModels
 {
-    public class BookedAppointmentResponseModel: IBaseResponse
+    public class BookedAppointmentResponseModel: BaseResponse
     {
         public string AppointmentReference { get; set; }
 

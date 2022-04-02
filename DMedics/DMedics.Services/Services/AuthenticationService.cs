@@ -11,6 +11,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Net;
+using System.Net.Sockets;
+using Microsoft.IdentityModel.Tokens;
 
 namespace DMedics.Services.Services
 {
@@ -28,32 +33,110 @@ namespace DMedics.Services.Services
         {
             _userManager = userManager;
             _logger = logger;
+            _jwt = jwt.Value;
         }
 
 
-        public IBaseResponse ForgotPassword(ForgotPasswordViewModel model)
+        public BaseResponse ForgotPassword(ForgotPasswordViewModel model)
+        {
+            return new BaseResponse { };
+        }
+
+        public async Task<BaseResponse> CreateToken(LoginViewModel loginModel)
+        {
+            try
+            {
+                var user = await _userManager.FindByEmailAsync(loginModel.Email).ConfigureAwait(false);
+                if (user == null)
+                    return new BaseResponse
+                    {
+                        IsSuccessful = false,
+                        StatusCode = StatusCodes.NoRecordFound,
+                        Message = Messages.InvalidLogin
+                    };
+
+                var tokenModel = new TokenViewModel();
+                if (await _userManager.CheckPasswordAsync(user, loginModel.Password).ConfigureAwait(false))
+                {
+                    JwtSecurityToken jwtSecurityToken = await CreateJwtToken(user).ConfigureAwait(false);
+                    tokenModel.Data = new TokenModel
+                    {
+                        Token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken),
+                        CustomerId = user.Id,
+                        Message = "success",
+                        Name = user.FirstName
+                    };
+                    tokenModel.StatusCode = StatusCodes.Successful;
+                    tokenModel.IsSuccessful = true;
+                    return tokenModel;
+                }
+                return new BaseResponse
+                {
+                    IsSuccessful = false,
+                    StatusCode = StatusCodes.NoRecordFound,
+                    Message = Messages.InvalidLogin
+                };
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation($"CreateToken Exception: {e}");
+                return new BaseResponse
+                {
+                    IsSuccessful = false,
+                    StatusCode = StatusCodes.FatalError,
+                    Message = Messages.ExceptionMessage
+                };
+            }
+        }
+
+        private async Task<JwtSecurityToken> CreateJwtToken(ApplicationUser user)
+        {
+            var userClaims = await _userManager.GetClaimsAsync(user).ConfigureAwait(false);
+            var roles = await _userManager.GetRolesAsync(user).ConfigureAwait(false);
+
+            var roleClaims = new List<Claim>();
+
+            for (int i = 0; i < roles.Count; i++)
+            {
+                roleClaims.Add(new Claim("roles", roles[i]));
+            }
+            string ipAddress = GetIpAddress();
+            var claims = new[]
+            {
+                new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(JwtRegisteredClaimNames.Email, user.Email),
+                new Claim("uid", user.Id),
+                new Claim("ip", ipAddress)
+            }
+            .Union(userClaims)
+            .Union(roleClaims);
+
+            var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwt.Key));
+            var signingCredentials = new SigningCredentials(symmetricSecurityKey, SecurityAlgorithms.HmacSha256);
+
+            var jwtSecurityToken = new JwtSecurityToken(
+                issuer: _jwt.Issuer,
+                audience: _jwt.Audience,
+                claims: claims,
+                expires: DateTime.UtcNow.AddMinutes(_jwt.DurationInMinutes),
+                signingCredentials: signingCredentials);
+            return jwtSecurityToken;
+        }
+
+        public BaseResponse ResetPassword(ResetPasswordViewModel model)
         {
             throw new NotImplementedException();
         }
 
-        public Task<TokenViewModel> Login(LoginRequestViewModel loginModel)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IBaseResponse ResetPassword(ResetPasswordViewModel model)
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task<IBaseResponse> SignUp(SignUpRequestModel signUpRequest)
+        public async Task<BaseResponse> SignUp(SignUpRequestModel signUpRequest)
         {
             try
             {
 
                 if (!signUpRequest.Email.EndsWith("@dmedics.com"))
                 {
-                    return new IBaseResponse
+                    return new BaseResponse
                     {
                         IsSuccessful = false,
                         Message = "You're not allowed to perform this operation",
@@ -73,10 +156,7 @@ namespace DMedics.Services.Services
                 var result = await _userManager.CreateAsync(user, signUpRequest.Password).ConfigureAwait(false);
                 if (result.Succeeded)
                 {
-                    //await _userManager.AddToRoleAsync(user, role.ToString());
-                    //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user).ConfigureAwait(false);
-                    // await _emailService.SendEmailConfirmationAsync(signUpRequest.Email, callbackUrl).ConfigureAwait(false);
-                    return new IBaseResponse
+                    return new BaseResponse
                     {
                         IsSuccessful = true,
                         Message = ResponseMessages.SignUpSuccessful,
@@ -84,7 +164,7 @@ namespace DMedics.Services.Services
                     };
 
                 }
-                return new IBaseResponse
+                return new BaseResponse
                 {
                     IsSuccessful = false,
                     Message = string.Join("\n", result.Errors.Select(x => x.Description).ToArray()),
@@ -94,7 +174,7 @@ namespace DMedics.Services.Services
             catch (Exception ex)
             {
                 _logger.LogInformation($"SignUp Exception: {ex}");
-                return new IBaseResponse
+                return new BaseResponse
                 {
                     IsSuccessful = false,
                     Message = ResponseMessages.ExceptionMessage,
@@ -110,5 +190,20 @@ namespace DMedics.Services.Services
         }
 
 
+        public string GetIpAddress()
+        {
+            var host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (var ip in host.AddressList)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    return ip.ToString();
+                }
+            }
+            return string.Empty;
+        }
+
     }
+
+  
 }
