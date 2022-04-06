@@ -23,4 +23,18 @@ namespace DMedics.Services.APIModels
         public string AppointmentDateTime { get; set; }
 
     }
+
+
+    public class UpdateAppointmentRequestModel
+    {
+
+        public string AppointmentId { get; set; }
+
+        [Required]
+        public string ClinicId { get; set; }
+
+        [Required]
+        public string UserId { get; set; }
+
+    }
 }

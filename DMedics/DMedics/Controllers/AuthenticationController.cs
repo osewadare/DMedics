@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using DMedics.Domain.Entities;
 using DMedics.Services.APIModels;
@@ -51,6 +52,16 @@ namespace DMedics.API.Controllers
         public IActionResult GetUsers()
         {
             var response = _authService.GetUsers();
+            return Ok(response);
+
+        }
+
+        [HttpPost]
+        [Route("change-password")]
+        public IActionResult ChangePassword(ResetPasswordViewModel model)
+        {
+            var userId = int.Parse(this.User.Claims.First(i => i.Type == "UserId").Value);
+            var response = _authService.ResetPassword(model);
             return Ok(response);
 
         }

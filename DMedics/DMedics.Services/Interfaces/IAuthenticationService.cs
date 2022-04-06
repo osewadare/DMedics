@@ -12,12 +12,9 @@ namespace DMedics.Services.Interfaces
     {
         Task<BaseResponse> SignUp(SignUpRequestModel signUpRequest);
 
-        BaseResponse ForgotPassword(ForgotPasswordViewModel model);
-
-        BaseResponse ResetPassword(ResetPasswordViewModel model);
+        Task<BaseResponse> ResetPassword(ResetPasswordViewModel model);
 
         Task<BaseResponse> CreateToken(LoginViewModel loginModel);
-
 
         BaseResponse GetUsers();
 

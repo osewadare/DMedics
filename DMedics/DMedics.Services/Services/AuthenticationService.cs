@@ -37,11 +37,6 @@ namespace DMedics.Services.Services
         }
 
 
-        public BaseResponse ForgotPassword(ForgotPasswordViewModel model)
-        {
-            return new BaseResponse { };
-        }
-
         public async Task<BaseResponse> CreateToken(LoginViewModel loginModel)
         {
             try
@@ -124,9 +119,51 @@ namespace DMedics.Services.Services
             return jwtSecurityToken;
         }
 
-        public BaseResponse ResetPassword(ResetPasswordViewModel model)
+        public async Task<BaseResponse> ResetPassword(ResetPasswordViewModel model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var user = await _userManager.FindByIdAsync(model.UserId).ConfigureAwait(false);
+                if (user == null)
+                {
+                    return new BaseResponse
+                    {
+                        IsSuccessful = false,
+                        StatusCode = StatusCodes.NoRecordFound,
+                        Message = "Failed"
+                    };
+                }
+
+                string resetToken = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+                var result = await _userManager.ResetPasswordAsync(user, resetToken, model.Password).ConfigureAwait(false);
+                if (result.Succeeded)
+                {
+                    return new BaseResponse
+                    {
+                        IsSuccessful = true,
+                        StatusCode = StatusCodes.Successful,
+                        Message = Messages.PasswordResetRequestSuccess
+                    };
+                }
+                return new BaseResponse
+                {
+                    IsSuccessful = false,
+                    StatusCode = StatusCodes.GeneralError,
+                    Message = "Failed"
+                };
+
+            }
+            catch (Exception e)
+            {
+                _logger.LogInformation($"ResetPassword Exception: {e}");
+                return new BaseResponse
+                {
+                    IsSuccessful = false,
+                    Message = ResponseMessages.ExceptionMessage,
+                    StatusCode = StatusCodes.GeneralError
+                };
+            }
         }
 
         public async Task<BaseResponse> SignUp(SignUpRequestModel signUpRequest)
@@ -233,6 +270,7 @@ namespace DMedics.Services.Services
                 };
             }
         }
+
     }
 
   

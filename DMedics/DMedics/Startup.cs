@@ -20,6 +20,8 @@ using DMedics.Services.Services;
 using DMedics.Repository.Repository;
 using Stripe;
 using DMedics.Infrastructure;
+using Hangfire;
+using Hangfire.Storage.SQLite;
 
 namespace DMedics
 {
@@ -52,6 +54,9 @@ namespace DMedics
             //Sets up Application services
             services.RegisterApplicationServices(Configuration);
 
+            services.AddHangfire(x => x.UseSQLiteStorage($"Filename=TestDb"));
+            services.AddHangfireServer();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,6 +64,9 @@ namespace DMedics
         {
 
             StripeConfiguration.ApiKey = "sk_test_51KfsT9HhUWcUfuFhmSzvPlO1ka3bAgWxeTZotEGCkhoDZZbptbSXIkO4L8AimHD8tT87P2xxYHG5wcU0zbPngZ3d00ojxSHffk";
+
+
+            app.UseHangfireDashboard();
 
 
             if (env.IsDevelopment())

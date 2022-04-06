@@ -18,6 +18,8 @@ namespace DMedics.Domain.Entities
         public Customer Customer { get; set; }
 
         //Navigation Property
+        [ForeignKey(nameof(AppointmentType))]
+        public int? AppointmentTypeId { get; set; }
         public AppointmentType AppointmentType { get; set; }
 
         //Navigation Property

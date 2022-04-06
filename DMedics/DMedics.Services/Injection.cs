@@ -19,6 +19,8 @@ namespace DMedics.Infrastructure
 
             service.AddScoped<IAuthenticationService, AuthenticationService>();
 
+            service.AddScoped<INotificationService, NotificationService>();
+
             return service;
         }
     }

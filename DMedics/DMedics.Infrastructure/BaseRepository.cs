@@ -49,10 +49,22 @@ namespace DMedics.Repository.Repository
             return query;
         }
 
-        public IEnumerable<T> GetAll()
+        public IEnumerable<T> GetAll(bool eager)
         {
-            return _context.Set<T>().ToList();
+            var query = _context.Set<T>().AsQueryable();
+            if (eager)
+            {
+                var navigations = _context.Model.FindEntityType(typeof(T))
+                    .GetDerivedTypesInclusive()
+                    .SelectMany(type => type.GetNavigations())
+                    .Distinct();
+
+                foreach (var property in navigations)
+                    query = query.Include(property.Name);
+            }
+            return query;
         }
+
         public T GetById(int id)
         {
             return _context.Set<T>().Find(id);

@@ -10,7 +10,7 @@ namespace DMedics.Repository.Repository
     public interface IBaseRepository<T>
     {
         T GetById(int id);
-        IEnumerable<T> GetAll();
+        IEnumerable<T> GetAll(bool eager);
         IEnumerable<T> Find(Expression<Func<T, bool>> expression);
         IEnumerable<T> FindandInclude(Expression<Func<T, bool>> expression, bool eager);
         void Add(T entity);

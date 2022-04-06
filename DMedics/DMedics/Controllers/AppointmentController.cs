@@ -84,9 +84,17 @@ namespace DMedics.API.Controllers
 
         [HttpPost]
         [Route("update-appointment")]
-        public IActionResult UpdateAppointment(CreateAppointmentRequestModel requestModel)
+        public IActionResult UpdateAppointment(UpdateAppointmentRequestModel requestModel)
         {
             var response = _appointmentService.UpdateAppointment(requestModel);
+            return Ok(response);
+        }
+
+        [HttpGet]
+        [Route("get-appointments")]
+        public IActionResult GetAppointments()
+        {
+            var response = _appointmentService.GetAppointments();
             return Ok(response);
         }
     }

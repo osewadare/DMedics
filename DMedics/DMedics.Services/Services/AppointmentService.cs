@@ -9,6 +9,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using DMedics.Domain.Enums;
 using DMedics.Services.Constants;
+using Hangfire;
 
 namespace DMedics.Services.Services
 {
@@ -20,12 +21,15 @@ namespace DMedics.Services.Services
         private IBaseRepository<AppointmentType> _appointmentTypeRepo;
         private ILogger<AppointmentService> _logger;
         private IPaymentService _paymentService;
+        private INotificationService _notificationService;
 
         public AppointmentService(IBaseRepository<Appointment> appointmentRepo,
             IBaseRepository<AppointmentType> appointmentTypeRepo,
             ILogger<AppointmentService> logger, IPaymentService paymentService,
-            IBaseRepository<Clinic> clinicsRepo)
+            IBaseRepository<Clinic> clinicsRepo,
+            INotificationService notificationService)
         {
+            _notificationService = notificationService;
             _appointmentRepo = appointmentRepo;
             _appointmentTypeRepo = appointmentTypeRepo;
             _logger = logger;
@@ -34,11 +38,12 @@ namespace DMedics.Services.Services
         }
 
 
+
         public BaseResponse GetAvailableAppointmentTypes()
         {
             try
             {
-                var appointmentTypes = _appointmentTypeRepo.GetAll().ToList();
+                var appointmentTypes = _appointmentTypeRepo.GetAll(false).ToList();
                 var appointmentTypesModel = appointmentTypes.Select(x => new AppointmentTypeModel
                 {
                     AppointmentTypeId = x.AppointmentTypeId,
@@ -64,7 +69,7 @@ namespace DMedics.Services.Services
         {
             try
             {
-                var clinics = _clinicsRepo.GetAll().ToList();
+                var clinics = _clinicsRepo.GetAll(false).ToList();
                 var clinicsModel = clinics.Select(x => new ClinicsModel
                 {
                     ClinicId= x.ClinicId,
@@ -143,7 +148,8 @@ namespace DMedics.Services.Services
                     //   createdApppointment.AppointmentStatus = AppointmentStatus.Booked;
                     createdApppointment.PaymentSecret = clientSecret;
                     createdApppointment.Customer = customer;
-                    createdApppointment.AppointmentType.AppointmentTypeId = int.Parse(appointment.AppointmentTypeId);
+
+                    createdApppointment.AppointmentTypeId = int.Parse(appointment.AppointmentTypeId);
                     _appointmentRepo.Update(createdApppointment);
                     return new BaseResponse
                     {
@@ -170,7 +176,6 @@ namespace DMedics.Services.Services
         {
             try
             {
-                var _dare = "dare";
                 //Lambda expression tree from a delegate that checks if appointment reference is matched
                 Expression <Func<Appointment, bool>> expression = x => x.AppointmentReference == appointmentReference;
                 var appointment = _appointmentRepo.FindandInclude(expression, true).FirstOrDefault();
@@ -209,6 +214,47 @@ namespace DMedics.Services.Services
             }
         }
 
+
+        public BaseResponse GetAppointments()
+        {
+            try
+            {
+
+                var appointments = _appointmentRepo.GetAll(true).ToList();
+
+                var response = new AppointmentsViewModel
+                {
+                    appointments = appointments.Select(x => new AppointmentsModel
+                    {
+                        AppointmentId = x.AppointmentId,
+                        AppointmentStatus = x.AppointmentStatus.ToString(),
+                        AppointmentReference = x.AppointmentReference,
+                        AppointmentTime = x.AppointmentTime,
+                        AppointmentType = x.AppointmentType?.TypeTitle,
+                        ClinicName = x.Clinic.ClinicName,
+                        CustomerName = $"{x.Customer?.FirstName} {x.Customer?.LastName}",
+                        DoctorName = $"{x.ApplicationUser.FirstName} {x.ApplicationUser.LastName}"
+                    }).ToList(),
+                    StatusCode = StatusCodes.Successful,
+                    IsSuccessful = true,
+                    Message = "success"
+                };
+                return response;
+
+            }
+            catch (Exception e)
+            {
+                _logger.LogError("GetAppointments Exception: e", e.Message);
+                return new BaseResponse
+                {
+                    StatusCode = StatusCodes.GeneralError,
+                    IsSuccessful = false,
+                    Message = "Sorry you request could not be completed. Please try again"
+                };
+            }
+        }
+
+
         public BaseResponse CreateAppointment(CreateAppointmentRequestModel createAppointmentRequestModel)
         {
             try
@@ -240,15 +286,15 @@ namespace DMedics.Services.Services
             }
         }
 
-        public BaseResponse UpdateAppointment(CreateAppointmentRequestModel createAppointmentRequestModel)
+        public BaseResponse UpdateAppointment(UpdateAppointmentRequestModel requestModel)
         {
             try
             {
-                var appointmentId = int.Parse(createAppointmentRequestModel.AppointmentId);
+                var appointmentId = int.Parse(requestModel.AppointmentId);
                 Expression<Func<Appointment, bool>> expression = x => x.AppointmentId == appointmentId;
                 var createdApppointment = _appointmentRepo.FindandInclude(expression, true).FirstOrDefault();
-                createdApppointment.ClinicId = int.Parse(createAppointmentRequestModel.ClinicId);
-                createdApppointment.ApplicationUserId = createAppointmentRequestModel.UserId;
+                createdApppointment.ClinicId = int.Parse(requestModel.ClinicId);
+                createdApppointment.ApplicationUserId = requestModel.UserId;
                 _appointmentRepo.Update(createdApppointment);
                 return new BaseResponse
                 {
@@ -274,7 +320,7 @@ namespace DMedics.Services.Services
             try
             {
                 Expression<Func<Appointment, bool>> expression = x => x.PaymentSecret == paymentIntent;
-                var appointment = _appointmentRepo.Find(expression).FirstOrDefault();
+                var appointment = _appointmentRepo.FindandInclude(expression, true).FirstOrDefault();
                 if (appointment == null)
                 {
                     return new BaseResponse
@@ -288,6 +334,22 @@ namespace DMedics.Services.Services
                                                 (redirectStatus == PaymentStatus.processing.ToString()) ? AppointmentStatus.PaymentProcessing :
                                                 (redirectStatus == PaymentStatus.requires_payment_method.ToString()) ? AppointmentStatus.PaymentFailed :
                                                  AppointmentStatus.PaymentStatusUnknown;
+
+                /*_notificationService.SendEmail(appointment.Customer.EmailAddress, "Booking Confirmed", $"Thank you for Booking. Find details below: \n " +
+                    $"Clinic Name: {appointment.Clinic.ClinicName} " +
+                    $"Appointment Time: {appointment.AppointmentTime}");
+
+                _notificationService.SendTextMessage(appointment.Customer.PhoneNumber, $"Thank you for Booking. Find details below: \n " +
+                    $"Clinic Name: {appointment.Clinic.ClinicName} " +
+                    $"Appointment Time: {appointment.AppointmentTime}");*/
+
+                var reminderDate = appointment.AppointmentTime.AddDays(-1);
+
+                var jobId = BackgroundJob.Schedule(
+                            () => _notificationService.SendTextMessage(appointment.Customer.PhoneNumber, $"Thank you for Booking. Find details below: \n " +
+                    $"Clinic Name: {appointment.Clinic.ClinicName} " +
+                    $"Appointment Time: {appointment.AppointmentTime}"), reminderDate);
+
 
                 var bookingReference = Guid.NewGuid().ToString().Substring(0, 6);
                 appointment.AppointmentReference = bookingReference;

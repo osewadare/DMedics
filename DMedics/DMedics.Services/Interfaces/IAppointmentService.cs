@@ -27,7 +27,9 @@ namespace DMedics.Services.Interfaces
 
         BaseResponse CreateAppointment(CreateAppointmentRequestModel createAppointmentRequestModel);
 
-        BaseResponse UpdateAppointment(CreateAppointmentRequestModel createAppointmentRequestModel);
+        BaseResponse UpdateAppointment(UpdateAppointmentRequestModel createAppointmentRequestModel);
+
+        BaseResponse GetAppointments();
 
 
     }
