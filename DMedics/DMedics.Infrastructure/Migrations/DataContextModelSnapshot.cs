@@ -16,7 +16,7 @@ namespace DMedics.Infrastructure.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.15");
 
-            modelBuilder.Entity("DMedics.Core.Entities.ApplicationUser", b =>
+            modelBuilder.Entity("DMedics.Domain.Entities.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("TEXT");
@@ -25,7 +25,6 @@ namespace DMedics.Infrastructure.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Address1")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
@@ -33,7 +32,6 @@ namespace DMedics.Infrastructure.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("City")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
@@ -42,7 +40,6 @@ namespace DMedics.Infrastructure.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Country")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
@@ -93,7 +90,6 @@ namespace DMedics.Infrastructure.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("PostCode")
-                        .IsRequired()
                         .HasMaxLength(15)
                         .HasColumnType("TEXT");
 
@@ -119,7 +115,7 @@ namespace DMedics.Infrastructure.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("DMedics.Core.Entities.Appointment", b =>
+            modelBuilder.Entity("DMedics.Domain.Entities.Appointment", b =>
                 {
                     b.Property<int>("AppointmentId")
                         .ValueGeneratedOnAdd()
@@ -128,29 +124,26 @@ namespace DMedics.Infrastructure.Migrations
                     b.Property<string>("ApplicationUserId")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("AppointmentStatus")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("AppointmentReference")
+                        .HasColumnType("TEXT");
 
-                    b.Property<int>("AppointmentStatusId")
+                    b.Property<int>("AppointmentStatus")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("AppointmentTime")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("AppointmentTypeId")
+                    b.Property<int?>("AppointmentTypeId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("ClinicId")
+                    b.Property<int?>("ClinicId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("CustomerId")
+                    b.Property<int?>("CustomerId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("CustomerId1")
+                    b.Property<string>("PaymentSecret")
                         .HasColumnType("TEXT");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("INTEGER");
 
                     b.HasKey("AppointmentId");
 
@@ -160,12 +153,12 @@ namespace DMedics.Infrastructure.Migrations
 
                     b.HasIndex("ClinicId");
 
-                    b.HasIndex("CustomerId1");
+                    b.HasIndex("CustomerId");
 
                     b.ToTable("Appointments");
                 });
 
-            modelBuilder.Entity("DMedics.Core.Entities.AppointmentType", b =>
+            modelBuilder.Entity("DMedics.Domain.Entities.AppointmentType", b =>
                 {
                     b.Property<int>("AppointmentTypeId")
                         .ValueGeneratedOnAdd()
@@ -186,7 +179,7 @@ namespace DMedics.Infrastructure.Migrations
                     b.ToTable("AppointmentTypes");
                 });
 
-            modelBuilder.Entity("DMedics.Core.Entities.Clinic", b =>
+            modelBuilder.Entity("DMedics.Domain.Entities.Clinic", b =>
                 {
                     b.Property<int>("ClinicId")
                         .ValueGeneratedOnAdd()
@@ -222,10 +215,11 @@ namespace DMedics.Infrastructure.Migrations
                     b.ToTable("Clinics");
                 });
 
-            modelBuilder.Entity("DMedics.Core.Entities.Customer", b =>
+            modelBuilder.Entity("DMedics.Domain.Entities.Customer", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("DOB")
                         .HasColumnType("TEXT");
@@ -239,6 +233,9 @@ namespace DMedics.Infrastructure.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("Gender")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -256,7 +253,6 @@ namespace DMedics.Infrastructure.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ReferralSource")
-                        .IsRequired()
                         .HasMaxLength(250)
                         .HasColumnType("TEXT");
 
@@ -393,27 +389,23 @@ namespace DMedics.Infrastructure.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("DMedics.Core.Entities.Appointment", b =>
+            modelBuilder.Entity("DMedics.Domain.Entities.Appointment", b =>
                 {
-                    b.HasOne("DMedics.Core.Entities.ApplicationUser", "ApplicationUser")
+                    b.HasOne("DMedics.Domain.Entities.ApplicationUser", "ApplicationUser")
                         .WithMany()
                         .HasForeignKey("ApplicationUserId");
 
-                    b.HasOne("DMedics.Core.Entities.AppointmentType", "AppointmentType")
+                    b.HasOne("DMedics.Domain.Entities.AppointmentType", "AppointmentType")
                         .WithMany()
-                        .HasForeignKey("AppointmentTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("AppointmentTypeId");
 
-                    b.HasOne("DMedics.Core.Entities.Clinic", "Clinic")
+                    b.HasOne("DMedics.Domain.Entities.Clinic", "Clinic")
                         .WithMany()
-                        .HasForeignKey("ClinicId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ClinicId");
 
-                    b.HasOne("DMedics.Core.Entities.Customer", "Customer")
+                    b.HasOne("DMedics.Domain.Entities.Customer", "Customer")
                         .WithMany()
-                        .HasForeignKey("CustomerId1");
+                        .HasForeignKey("CustomerId");
 
                     b.Navigation("ApplicationUser");
 
@@ -435,7 +427,7 @@ namespace DMedics.Infrastructure.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("DMedics.Core.Entities.ApplicationUser", null)
+                    b.HasOne("DMedics.Domain.Entities.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -444,7 +436,7 @@ namespace DMedics.Infrastructure.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("DMedics.Core.Entities.ApplicationUser", null)
+                    b.HasOne("DMedics.Domain.Entities.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -459,7 +451,7 @@ namespace DMedics.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("DMedics.Core.Entities.ApplicationUser", null)
+                    b.HasOne("DMedics.Domain.Entities.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -468,7 +460,7 @@ namespace DMedics.Infrastructure.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("DMedics.Core.Entities.ApplicationUser", null)
+                    b.HasOne("DMedics.Domain.Entities.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)

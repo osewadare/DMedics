@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
-using DMedics.Core.Enums;
-using static DMedics.Core.Entities.ApplicationUser;
+using DMedics.Domain.Enums;
+using static DMedics.Domain.Entities.ApplicationUser;
 
 namespace DMedics.Services.APIModels
 {
@@ -28,16 +28,18 @@ namespace DMedics.Services.APIModels
         public string PhoneNumber { get; set; }
 
         [Required]
-        public Gender Gender { get; set; }
+        public string Gender { get; set; }
 
-        [Required]
+        //[Required]
         public string ClinicId { get; set; }
 
-        [Required]
+        //[Required]
         public string AppointmentId { get; set; }
 
         [Required]
         public string AppointmentTypeId { get; set; }
+
+        public string PostCode { get; set; }
 
 
     }

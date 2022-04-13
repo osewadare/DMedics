@@ -14,13 +14,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using DMedics.API.Helpers;
 using DMedics.Repository;
 using DMedics.Services.Interfaces;
 using DMedics.Services.Services;
-using DMedics.Infrastructure;
 using DMedics.Repository.Repository;
 using Stripe;
+using DMedics.Infrastructure;
+using Hangfire;
+using Hangfire.Storage.SQLite;
 
 namespace DMedics
 {
@@ -36,8 +37,8 @@ namespace DMedics
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddMicrosoftIdentityWebApi(Configuration.GetSection("AzureAd"));
+           // services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+               // .AddMicrosoftIdentityWebApi(Configuration.GetSection("AzureAd"));
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -47,19 +48,14 @@ namespace DMedics
 
 
 
-            //Sets up database services
-            services.AddDbContext<DataContext>(); 
+            //Sets up Infrastructure services - 
+            services.RegisterInfrastructureServices(Configuration, Configuration["JwtSecurityToken:Issuer"], Configuration["JwtSecurityToken:Audience"], Configuration["JwtSecurityToken:Key"]);
 
-            //sets up identity services using an extension method
-            IdentityHelper.ConfigureService(services);
+            //Sets up Application services
+            services.RegisterApplicationServices(Configuration);
 
-            //Our own services - Scoped, Transient and Singelton Services
-            //scoped - available throught out the lifetime of a request 
-            services.AddScoped<IAppointmentService, AppointmentService>();
-
-            services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
-
-
+            services.AddHangfire(x => x.UseSQLiteStorage($"Filename=TestDb"));
+            services.AddHangfireServer();
 
         }
 
@@ -67,14 +63,19 @@ namespace DMedics
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
 
-            StripeConfiguration.ApiKey = "sk_test_26PHem9AhJZvU623DfE1x4sd";
+            StripeConfiguration.ApiKey = "sk_test_51KfsT9HhUWcUfuFhmSzvPlO1ka3bAgWxeTZotEGCkhoDZZbptbSXIkO4L8AimHD8tT87P2xxYHG5wcU0zbPngZ3d00ojxSHffk";
 
+
+            app.UseHangfireDashboard();
+
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "DMedics v1"));
 
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "DMedics v1"));
+                
             }
 
             app.UseHttpsRedirection();

@@ -6,13 +6,19 @@ using System.Threading.Tasks;
 
 namespace DMedics.Services.APIModels
 {
-    public class AppointmentTypeResponseModel
+    public class AppointmentTypeResponseModel: BaseResponse
     {
+        public List<AppointmentTypeModel> appointmentTypes { get; set; }
+    }
 
+    public class AppointmentTypeModel 
+    {
         public int AppointmentTypeId { get; set; }
 
         public string TypeTitle { get; set; }
 
         public string TypeDescription { get; set; }
     }
+
+
 }

@@ -15,12 +15,17 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DMedics.Services\DMedics.Services.csproj" />
+    <ProjectReference Include="..\DMedics.Infrastructure\DMedics.Infrastructure.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="Controllers\" />
+    <None Remove="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
 </Project>

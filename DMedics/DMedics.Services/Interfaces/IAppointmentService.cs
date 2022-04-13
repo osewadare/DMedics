@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DMedics.Core.Entities;
+using DMedics.Domain.Entities;
 using DMedics.Services.APIModels;
 
 namespace DMedics.Services.Interfaces
@@ -13,21 +13,24 @@ namespace DMedics.Services.Interfaces
 
 
         //Assumption - appointments are created for specific clinics but all appointment types are available in all clcinics
-        List<CreatedAppointmentResponseModel> GetCreatedAppointmentDates(string clinicId);
+        BaseResponse GetCreatedAppointmentDates(string clinicId);
 
-        //create, get, book, update, cancel       
-        List<AppointmentTypeResponseModel> GetAvailableAppointmentTypes();
+        BaseResponse GetClinics();
 
-        bool CreateAppointmentBookingIntent(AppointmentRequestModel appointment);
+        BaseResponse GetAvailableAppointmentTypes();
 
-        BookedAppointmentResponseModel GetAppointment(int AppointmentId);
+        BaseResponse CreateAppointmentBookingIntent(AppointmentRequestModel appointment);
 
+        BaseResponse UpdateAppointmentPaymentStatus(string paymentIntent, string redirectStatus);
 
+        BaseResponse GetAppointment(string appointmentReference);
 
-        //Sprint 2
-        bool CreateAppointment(int AppointmentTypeId, int AppointmentId);
+        BaseResponse CreateAppointment(CreateAppointmentRequestModel createAppointmentRequestModel);
 
-        Appointment UpdateAppointment(int AppointmentId);
+        BaseResponse UpdateAppointment(UpdateAppointmentRequestModel createAppointmentRequestModel);
+
+        BaseResponse GetAppointments();
+
 
     }
 }

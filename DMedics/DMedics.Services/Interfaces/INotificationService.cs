@@ -8,7 +8,9 @@ namespace DMedics.Services.Interfaces
 {
     public interface INotificationService
     {
-        //sent
+        void SendEmail(string toEmail, string subject, string messageContent);
+
+        void SendTextMessage(string phoneNumber, string messageContent);
         
     }
 }
